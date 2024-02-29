@@ -23,6 +23,8 @@ $(document).ready(function() {
             var curIndex = $('.section-buy-box-variants-menu a').index(curItem);
             $('.section-buy-box-variant.active').removeClass('active');
             $('.section-buy-box-variant').eq(curIndex).addClass('active');
+            $('.section-buy-list-inner.active').removeClass('active');
+            $('.section-buy-list-inner').eq(curIndex).addClass('active');
         }
         e.preventDefault();
     });
