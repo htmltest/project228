@@ -140,6 +140,23 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.page-link').click(function(e) {
+        var curBlock = $(this.hash);
+        if (curBlock.length == 1) {
+            $('html, body').animate({'scrollTop': curBlock.offset().top - $('header').outerHeight() - 20});
+            e.preventDefault();
+        }
+    });
+
+});
+
+$(window).on('load', function() {
+    if (window.location.hash != '') {
+        var curBlock = $(window.location.hash);
+        if (curBlock.length == 1) {
+            $('html, body').animate({'scrollTop': curBlock.offset().top - $('header').outerHeight() - 20});
+        }
+    }
 });
 
 $(window).on('load resize scroll', function() {

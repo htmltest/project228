@@ -322,7 +322,7 @@ header.fixed .header-buy .btn {border-radius:0}
 @media (max-width:1199px) {
     .section-buy {padding:80px 0; margin:0}
     .section-buy::before {left:-15px; top:0; right:-15px; bottom:0; margin:0; width:auto; height:auto; background:url(../images/section-buy-bg-mobile.jpg) no-repeat center top; background-size:cover}
-    .main-buy {margin:160px 0 0 0}
+    .main-buy {margin:40px 0 0 0}
     .section-buy-content {display:block}
     .section-buy-box {min-width:0; max-width:345px; padding:20px 0 0 0; margin:0 auto}
     .section-buy-variants {min-width:0; max-width:none}
@@ -438,6 +438,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .hemorrhoids-reasons-list:last-child {order:2}
 .hemorrhoids-reasons-item {margin:30px 0 0 0; position:relative; padding:0 10px 0 20px; display:flex; height:108px; align-items:center; background:#FFFFFF; border-radius:10px; box-shadow:0px 0px 40px rgba(82, 66, 158, 0.25)}
 .hemorrhoids-reasons-item:first-child {margin:0}
+.hemorrhoids-reasons-item:hover {z-index:1}
 .hemorrhoids-reasons-item img {min-width:76px; max-width:76px}
 .hemorrhoids-reasons-item-text {margin:0 0 0 20px; font-weight:600; line-height:25px; color:#52429E}
 .hemorrhoids-reasons-item-text span {border-bottom:1px dashed #52429E; transition:color 0.2s, border-color 0.2s}
@@ -464,12 +465,12 @@ header.fixed .header-buy .btn {border-radius:0}
 .hemorrhoids-how-menu {display:none}
 .hemorrhoids-how-acute-title {margin:20px 0 0 0; text-align:center; font-weight:bold; font-size:24px; line-height:31px; color:#EA5C8D}
 .hemorrhoids-how-acute-text {text-align:center; font-size:24px; line-height:31px; color:#3E3E59}
-.hemorrhoids-how-acute-content {display:flex; justify-content:space-between; margin:40px 0 0 0}
-.hemorrhoids-how-acute-first-hints {padding:177px 0 0 0; min-width:81px; max-width:81px; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase}
+.hemorrhoids-how-acute-content {display:flex; justify-content:space-between; margin:40px 0 0 0; align-items:flex-end}
+.hemorrhoids-how-acute-first-hints {padding:0 0 32px 0; min-width:81px; max-width:81px; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase}
 .hemorrhoids-how-acute-first-hint {margin:50px 0 0 0; display:flex; align-items:center; justify-content:space-between; width:90px}
 .hemorrhoids-how-acute-first-hint:first-child {margin:0}
 .hemorrhoids-how-acute-first-hint::after {content:""; width:30px; height:1px; background:#EA5C8D}
-.hemorrhoids-how-acute-first {min-width:430px; max-width:430px}
+.hemorrhoids-how-acute-first {min-width:439px; max-width:439px}
 .hemorrhoids-how-acute-first-title {text-align:center; font-weight:bold; color:#52429E; font-size:24px; line-height:36px}
 .hemorrhoids-how-acute-first-text {text-align:center; font-size:24px; line-height:36px; color:#3E3E59}
 .hemorrhoids-how-acute-first-days {margin:40px 0 0 0; display:flex; justify-content:center; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase; color:#EA5C8D}
@@ -477,7 +478,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .hemorrhoids-how-acute-first-scheme {margin:5px 0 0 0}
 .hemorrhoids-how-acute-first-scheme img {display:block; margin:0 auto}
 .hemorrhoids-how-acute-first-scheme-mobile {display:none}
-.hemorrhoids-how-acute-second {min-width:430px; max-width:430px}
+.hemorrhoids-how-acute-second {min-width:439px; max-width:439px}
 .hemorrhoids-how-acute-second-title {text-align:center; font-weight:bold; color:#52429E; font-size:24px; line-height:36px}
 .hemorrhoids-how-acute-second-text {text-align:center; font-size:24px; line-height:36px; color:#3E3E59}
 .hemorrhoids-how-acute-second-days {margin:40px 0 0 0; display:flex; justify-content:center; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase; color:#52429E}
@@ -485,7 +486,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .hemorrhoids-how-acute-second-scheme {margin:5px 0 0 0}
 .hemorrhoids-how-acute-second-scheme img {display:block; margin:0 auto}
 .hemorrhoids-how-acute-second-scheme-mobile {display:none}
-.hemorrhoids-how-acute-second-hints {padding:213px 0 0 0; min-width:81px; max-width:81px; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase}
+.hemorrhoids-how-acute-second-hints {padding:0 0 68px 0; min-width:81px; max-width:81px; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase}
 .hemorrhoids-how-acute-second-hint {margin:50px 0 0 0; display:flex; align-items:center; justify-content:space-between; width:90px}
 .hemorrhoids-how-acute-second-hint:first-child {margin:0}
 .hemorrhoids-how-acute-second-hint::before {content:""; width:30px; height:1px; background:#EA5C8D}
@@ -716,7 +717,8 @@ header.fixed .header-buy .btn {border-radius:0}
     .varicose-reasons-item-text {margin:15px 0 0 0}
     .varicose-reasons-item-info {right:10px; top:15px}
     .varicose-reasons-item-info-text {right:-10px; top:30px}
-    .varicose-reasons-item:first-child .varicose-reasons-item-info-text {right:auto; left:-130px}
+    .varicose-reasons-item:first-child .varicose-reasons-item-info-text,
+    .hemorrhoids-reasons-item:first-child .varicose-reasons-item-info-text    {right:auto; left:-130px}
 }
 
 .varicose-types-menu {display:none}
@@ -1136,8 +1138,6 @@ footer {position:relative; margin:120px 0 0 0}
     .footer-contacts-list a svg {min-width:19px; max-width:19px; height:19px}
     .footer-contacts-feedback {display:block; width:auto; padding:0; margin:20px 0 0 0}
     .footer-contacts-feedback-title {font-weight:500; font-size:15px; line-height:21px}
-    .footer-contacts-feedback-link {margin:10px 0 0 0; width:calc(50% - 7.5px)}
-    .footer-contacts-feedback-link .btn {width:100%; padding-left:0; padding-right:0}
 }
 
 .footer-container {background:#F8F8FC; padding:30px 0}
@@ -1161,7 +1161,6 @@ footer {position:relative; margin:120px 0 0 0}
     .footer-container .container {display:block}
     .footer-container-info {display:block; min-width:0; max-width:none; padding:0; border-right:none}
     .footer-container-logo svg {width:165px; height:36px}
-    .footer-container-buy {position:absolute; width:calc(50% - 22.5px); margin:0; right:15px; top:-63px}
     .footer-container-buy .btn {min-width:100%; padding-left:0; padding-right:0}
     .footer-container-menu {margin:20px 0 0 0; font-size:18px; line-height:27px; border-top:1px solid rgba(168, 168, 191, 0.2)}
     .footer-container-menu ul {margin:0; column-count:1}
