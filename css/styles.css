@@ -185,8 +185,12 @@ header.fixed .header-buy .btn {border-radius:0}
 
 .section-articles {position:relative}
 .section-articles .section-title {text-align:left}
-.section-articles-list {margin:0 -10px; display:flex; flex-wrap:wrap}
-.section-articles-item {display:flex; min-width:50%; max-width:50%; padding:20px 10px 0 10px}
+.section-articles-list,
+.section-articles-list.swiper {margin:0 -10px; display:flex; flex-wrap:wrap; overflow:visible}
+.section-articles-list-inner,
+.section-articles-list-inner.swiper-wrapper {display:flex; width:auto; height:auto; flex-wrap:wrap; overflow:visible}
+.section-articles-item,
+.section-articles-item.swiper-slide {display:flex; min-width:50%; max-width:50%; padding:20px 10px 0 10px; height:auto}
 .section-articles-item a {display:flex; width:100%; padding:16px; background:#FFFFFF; box-shadow:0px 4px 40px rgba(0, 0, 0, 0.15); border-radius:12px; transition:transform 0.2s}
 .section-articles-item a:hover {transform:translateY(-5px)}
 .section-articles-item-preview {min-width:200px; max-width:200px}
@@ -203,10 +207,14 @@ header.fixed .header-buy .btn {border-radius:0}
 .section-articles-item-view svg {width:23px; height:23px; fill:#5C5C73; margin:0 10px 0 0}
 .section-articles-all {position:absolute; right:0; top:11px}
 .section-articles-all a {border-bottom:1px solid rgba(82, 66, 158, 0.25)}
+.section-articles-list-ctrl {display:none}
 
 @media (max-width:1199px) {
     .section-articles-list {margin:20px 0 0 0; display:block}
+    .section-articles-list.swiper {margin:20px -10px 0 -10px; display:flex; flex-wrap:nowrap}
+    .section-articles-list-inner.swiper-wrapper {flex-wrap:nowrap}
     .section-articles-item {display:block; min-width:0; max-width:none; padding:0; margin:20px 0 0 0}
+    .section-articles-item.swiper-slide {margin:0; min-width:0; max-width:none; padding:0 10px 56px 10px; display:block}
     .section-articles-item a {display:block; padding:24px}
     .section-articles-item-preview {min-width:0; max-width:none; width:100%; min-height:200px; max-height:200px}
     .section-articles-item-preview-inner {border-radius:10px}
@@ -221,6 +229,21 @@ header.fixed .header-buy .btn {border-radius:0}
     .section-articles-item-view svg {width:27px; height:27px}
     .section-articles-all {position:relative; right:auto; top:auto; margin:20px 0 0 0}
     .section-articles-all a {border-bottom:none; display:block; padding:16px 0 12px 0; text-align:center; font-weight:600; font-size:14px; line-height:20px; letter-spacing:0.09em; text-transform:uppercase; color:#5C5C73; background:#E9E6F3; border-radius:4px}
+    .section-articles-list-ctrl {display:flex; position:absolute; left:0; bottom:0; right:0; align-items:center; justify-content:space-between}
+    .section-articles-list-ctrl .swiper-button-prev,
+    .section-articles-list-ctrl .swiper-button-next {position:relative; z-index:2; top:auto; width:36px; white-space:nowrap; display:flex; align-items:center; height:36px; border:none; border-radius:0; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:transparent; transform:none; opacity:1; font-size:15px; line-height:23px; color:#EA5C8D}
+    .section-articles-list-ctrl .swiper-button-next.swiper-button-disabled,
+    .section-articles-list-ctrl .swiper-button-prev.swiper-button-disabled {opacity:0.3}
+    .section-articles-list-ctrl .swiper-button-prev::after,
+    .section-articles-list-ctrl .swiper-button-next::after {display:none}
+    .section-articles-list-ctrl .swiper-button-prev svg,
+    .section-articles-list-ctrl .swiper-button-next svg {display:block; width:36px; height:36px; fill:#EA5C8D}
+    .section-articles-list-ctrl .swiper-button-next.swiper-button-disabled svg,
+    .section-articles-list-ctrl .swiper-button-prev.swiper-button-disabled svg {fill:#65657B}
+    .section-articles-list-ctrl .swiper-pagination.swiper-pagination-horizontal {display:flex; position:relative; margin:0 15px; width:100%; left:auto; top:auto; right:auto; bottom:auto; align-items:center; justify-content:center}
+    .section-articles-list-ctrl .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet {display:block; flex-grow:1; min-width:0; height:4px; background:rgba(101, 101, 123, 0.2); opacity:1; margin:0 5px; border-radius:2px; cursor:pointer; position:relative}
+    .section-articles-list-ctrl .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet::before {content:""; position:absolute; left:0; top:-10px; right:0; bottom:-10px}
+    .section-articles-list-ctrl .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet-active {background:#EA5C8D; opacity:1}
 }
 
 .main-articles .section-articles-list {margin-top:20px}
@@ -354,7 +377,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .hemorrhoids-complex-img-text {position:absolute; left:50%; top:100%; margin:9px 0 0 -254px; width:508px; padding:16px 80px; font-weight:600; line-height:25px; color:#52429E; text-align:center; background:#FFFFFF; border-radius:10px; box-shadow:0px 0px 40px rgba(82, 66, 158, 0.25)}
 .hemorrhoids-complex-img-text-info {display:inline-block; vertical-align:middle; margin:-2px 0 0 0; width:24px; height:24px; position:relative}
 .hemorrhoids-complex-img-text-info > svg {display:block; width:24px; height:24px; fill:#EE8F9F}
-.hemorrhoids-complex-img-text-info-text {display:none; position:absolute; right:-85px; top:27px; width:350px; padding:20px; font-weight:500; font-size:15px; line-height:23px; letter-spacing:0.01em; text-align:left; background:#FFFFFF; border-radius:6px; box-shadow:0px 0px 24px rgba(0, 0, 0, 0.1); color:#3E3E59}
+.hemorrhoids-complex-img-text-info-text {display:none; position:absolute; z-index:20; right:-85px; top:27px; width:350px; padding:20px; font-weight:500; font-size:15px; line-height:23px; letter-spacing:0.01em; text-align:left; background:#FFFFFF; border-radius:6px; box-shadow:0px 0px 24px rgba(0, 0, 0, 0.1); color:#3E3E59}
 .hemorrhoids-complex-img-text-info:hover .hemorrhoids-complex-img-text-info-text {display:block}
 .hemorrhoids-complex-img-left {position:absolute; right:100%; margin-right:6px; bottom:-40px; width:103px}
 .hemorrhoids-complex-img-left img {display:block; width:100%}
@@ -381,6 +404,8 @@ header.fixed .header-buy .btn {border-radius:0}
     .hemorrhoids-complex-img-main-mobile {display:block}
     .hemorrhoids-complex-img-main-mobile img {display:block; width:100%; border-radius:16px}
     .hemorrhoids-complex-img-text {position:relative; left:auto; top:auto; margin:70px 0 0 0; width:auto; padding:24px 30px 16px 30px}
+    .hemorrhoids-complex-img-text-info {position:static}
+    .hemorrhoids-complex-img-text-info-text {right:0; left:0; width:auto; margin:-10px 0 0 0; top:100%}
     .hemorrhoids-complex-img-left {bottom:auto; top:235px; right:auto; left:0}
     .hemorrhoids-complex-img-right {bottom:auto; top:235px; right:0; left:auto}
     .hemorrhoids-complex-text {min-width:0; max-width:none; padding:0; margin:20px 0 0 0}
@@ -435,6 +460,7 @@ header.fixed .header-buy .btn {border-radius:0}
     .hemorrhoids-reasons-item-text {margin:10px 0 0 0; font-weight:500}
 }
 
+.hemorrhoids-how-menu {display:none}
 .hemorrhoids-how-acute-title {margin:20px 0 0 0; text-align:center; font-weight:bold; font-size:24px; line-height:31px; color:#EA5C8D}
 .hemorrhoids-how-acute-text {text-align:center; font-size:24px; line-height:31px; color:#3E3E59}
 .hemorrhoids-how-acute-content {display:flex; justify-content:space-between; margin:40px 0 0 0}
@@ -442,20 +468,22 @@ header.fixed .header-buy .btn {border-radius:0}
 .hemorrhoids-how-acute-first-hint {margin:50px 0 0 0; display:flex; align-items:center; justify-content:space-between; width:90px}
 .hemorrhoids-how-acute-first-hint:first-child {margin:0}
 .hemorrhoids-how-acute-first-hint::after {content:""; width:30px; height:1px; background:#EA5C8D}
-.hemorrhoids-how-acute-first {min-width:439px; max-width:430px}
+.hemorrhoids-how-acute-first {min-width:430px; max-width:430px}
 .hemorrhoids-how-acute-first-title {text-align:center; font-weight:bold; color:#52429E; font-size:24px; line-height:36px}
 .hemorrhoids-how-acute-first-text {text-align:center; font-size:24px; line-height:36px; color:#3E3E59}
 .hemorrhoids-how-acute-first-days {margin:40px 0 0 0; display:flex; justify-content:center; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase; color:#EA5C8D}
 .hemorrhoids-how-acute-first-day {min-width:83px; text-align:center}
 .hemorrhoids-how-acute-first-scheme {margin:5px 0 0 0}
 .hemorrhoids-how-acute-first-scheme img {display:block; margin:0 auto}
-.hemorrhoids-how-acute-second {min-width:439px; max-width:430px}
+.hemorrhoids-how-acute-first-scheme-mobile {display:none}
+.hemorrhoids-how-acute-second {min-width:430px; max-width:430px}
 .hemorrhoids-how-acute-second-title {text-align:center; font-weight:bold; color:#52429E; font-size:24px; line-height:36px}
 .hemorrhoids-how-acute-second-text {text-align:center; font-size:24px; line-height:36px; color:#3E3E59}
 .hemorrhoids-how-acute-second-days {margin:40px 0 0 0; display:flex; justify-content:center; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase; color:#52429E}
 .hemorrhoids-how-acute-second-day {min-width:86px; text-align:center}
 .hemorrhoids-how-acute-second-scheme {margin:5px 0 0 0}
 .hemorrhoids-how-acute-second-scheme img {display:block; margin:0 auto}
+.hemorrhoids-how-acute-second-scheme-mobile {display:none}
 .hemorrhoids-how-acute-second-hints {padding:213px 0 0 0; min-width:81px; max-width:81px; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase}
 .hemorrhoids-how-acute-second-hint {margin:50px 0 0 0; display:flex; align-items:center; justify-content:space-between; width:90px}
 .hemorrhoids-how-acute-second-hint:first-child {margin:0}
@@ -464,20 +492,85 @@ header.fixed .header-buy .btn {border-radius:0}
 .hemorrhoids-how-chronic-title {text-align:center; font-weight:bold; font-size:24px; line-height:31px; color:#EA5C8D}
 .hemorrhoids-how-chronic-text {text-align:center; font-size:24px; line-height:31px; color:#3E3E59}
 .hemorrhoids-how-chronic-scheme {margin:-20px 0; display:flex; justify-content:center}
+.hemorrhoids-how-chronic-scheme-mobile {display:none}
+
+@media (max-width:1199px) {
+    .hemorrhoids-how-menu {display:flex; margin:20px 0 0 0}
+    .hemorrhoids-how-menu a {min-width:50%; max-width:50%; padding:5px 0 9px 0; border-radius:6px 6px 0 0; border-bottom:1px solid #FFFFFF; text-align:center; font-weight:bold; font-size:20px; line-height:26px; color:#5C5C73}
+    .hemorrhoids-how-menu a.active {background:#F4F2FF; border-color:#EA5C8D; color:#EA5C8D}
+    .hemorrhoids-how-items {margin:40px 0 0 0}
+    .hemorrhoids-how-item {display:none}
+    .hemorrhoids-how-item.active {display:block}
+    .hemorrhoids-how-acute-title {display:none}
+    .hemorrhoids-how-acute-content {display:block}
+    .hemorrhoids-how-acute-first-hints {display:none}
+    .hemorrhoids-how-acute-first {min-width:0; max-width:none}
+    .hemorrhoids-how-acute-first-title {font-size:18px; line-height:27px}
+    .hemorrhoids-how-acute-first-text {font-size:18px; line-height:27px}
+    .hemorrhoids-how-acute-first-days {margin:20px 0 0 0; font-size:14px; line-height:21px}
+    .hemorrhoids-how-acute-first-day {min-width:69px}
+    .hemorrhoids-how-acute-first-scheme {display:none}
+    .hemorrhoids-how-acute-first-scheme-mobile {display:block; margin:10px auto 0 auto; max-width:345px}
+    .hemorrhoids-how-acute-first-scheme-mobile img {display:block; margin:0 auto; width:100%}
+    .hemorrhoids-how-acute-second {min-width:0; max-width:none; margin:40px 0 0 0}
+    .hemorrhoids-how-acute-second-title {font-size:18px; line-height:27px}
+    .hemorrhoids-how-acute-second-text {font-size:18px; line-height:27px}
+    .hemorrhoids-how-acute-second-days {margin:20px 0 0 0; font-size:14px; line-height:21px}
+    .hemorrhoids-how-acute-second-day {min-width:0; margin:0 6px}
+    .hemorrhoids-how-acute-second-scheme {display:none}
+    .hemorrhoids-how-acute-second-scheme-mobile {display:block; margin:10px auto 0 auto; max-width:345px}
+    .hemorrhoids-how-acute-second-scheme-mobile img {display:block; width:100%}
+    .hemorrhoids-how-acute-second-hints {display:none}
+    .hemorrhoids-how-sep {display:none}
+    .hemorrhoids-how-chronic-title {display:none}
+    .hemorrhoids-how-chronic-scheme {display:none}
+    .hemorrhoids-how-chronic-scheme-mobile {display:block; margin:20px auto 0 auto; max-width:345px}
+    .hemorrhoids-how-chronic-scheme-mobile img {display:block; width:100%}
+}
 
 .hemorrhoids-about {position:relative}
 .hemorrhoids-about::before {content:""; position:absolute; left:50%; top:-63px; width:1960px; margin:0 0 0 -980px; height:1509px; background:url(../images/hemorrhoids-about-bg.jpg) no-repeat; z-index:-1; pointer-events:none}
 .hemorrhoids-about-anonce {margin:20px auto 0 auto; max-width:550px; text-align:center; color:#3E3E59}
 .hemorrhoids-about-subtitle {margin:40px 0 0 0; font-weight:600; font-size:24px; line-height:34px; color:#3E3E59; text-align:center}
 .hemorrhoids-about-subtitle sup {display:inline-block; vertical-align:top; margin:0 0 0 5px; font-weight:500; font-size:13px; line-height:18px; border-bottom:1px dotted #52429E; color:#52429E}
-.hemorrhoids-about-list {margin:40px auto 0 auto; max-width:766px}
-.hemorrhoids-about-item {display:flex; margin:20px 0 0 0; align-items:center; justify-content:space-between}
+.hemorrhoids-about-list,
+.hemorrhoids-about-list.swiper {margin:40px auto 0 auto; max-width:766px; display:block}
+.hemorrhoids-about-list-inner,
+.hemorrhoids-about-list-inner.swiper-wrapper {display:block; width:auto; height:auto}
+.hemorrhoids-about-item,
+.hemorrhoids-about-item.swiper-slide {display:flex; margin:20px 0 0 0; align-items:center; justify-content:space-between; height:auto}
 .hemorrhoids-about-item-content {min-width:calc(50% - 10px); max-width:calc(50% - 10px); opacity:0.8}
 .hemorrhoids-about-item:nth-child(even) .hemorrhoids-about-item-content {order:1}
 .hemorrhoids-about-item-title {font-weight:bold; font-size:24px; line-height:36px; color:#6F2782}
 .hemorrhoids-about-item-text {margin:20px 0 0 0; color:#3E3E59}
 .hemorrhoids-about-item-img {min-width:calc(50% - 10px); max-width:calc(50% - 10px)}
 .hemorrhoids-about-item-img img {display:block; width:100%; border-radius:16px; box-shadow:0px 4px 40px rgba(82, 66, 158, 0.15)}
+.hemorrhoids-about-list-ctrl {display:none}
+
+@media (max-width:1199px) {
+    .hemorrhoids-about {margin:40px -15px 0 -15px; padding:120px 0 112px 0}
+    .hemorrhoids-about::before {left:-15px; top:0; right:-15px; bottom:0; width:auto; height:auto; margin:0; background:url(../images/hemorrhoids-about-bg-mobile.jpg) no-repeat center top; background-size:cover}
+    .hemorrhoids-about-list,
+    .hemorrhoids-about-list.swiper {max-width:none; display:flex}
+    .hemorrhoids-about-list-inner,
+    .hemorrhoids-about-list-inner.swiper-wrapper {display:flex; width:100%; height:100%}
+    .hemorrhoids-about-item,
+    .hemorrhoids-about-item.swiper-slide {min-width:100%; margin:0; display:block; padding:0 0 52px 0}
+    .hemorrhoids-about-item-content {min-width:0; max-width:none; opacity:1; padding:0 15px}
+    .hemorrhoids-about-item-text {margin:0}
+    .hemorrhoids-about-item-img {min-width:0; max-width:none; margin:20px 15px 0 15px}
+    .hemorrhoids-about-list-ctrl {display:flex; position:absolute; left:0; bottom:0; right:0; align-items:center; justify-content:space-between}
+    .hemorrhoids-about-list-ctrl .swiper-button-prev,
+    .hemorrhoids-about-list-ctrl .swiper-button-next {position:relative; z-index:2; top:auto; width:auto; white-space:nowrap; display:flex; align-items:center; height:32px; border:1px solid #EA5C8D; border-radius:16px; margin:0; padding:0 16px; outline:none; -webkit-appearance:none; cursor:pointer; background:transparent; transform:none; opacity:1; font-size:15px; line-height:23px; color:#EA5C8D}
+    .hemorrhoids-about-list-ctrl .swiper-button-next.swiper-button-disabled,
+    .hemorrhoids-about-list-ctrl .swiper-button-prev.swiper-button-disabled {opacity:1}
+    .hemorrhoids-about-list-ctrl .swiper-button-prev::after,
+    .hemorrhoids-about-list-ctrl .swiper-button-next::after {display:none}
+    .hemorrhoids-about-list-ctrl .swiper-button-prev svg,
+    .hemorrhoids-about-list-ctrl .swiper-button-next svg {display:block; width:24px; height:24px; fill:#EA5C8D}
+    .hemorrhoids-about-list-ctrl .swiper-button-next svg {margin:0 0 0 10px}
+    .hemorrhoids-about-list-ctrl .swiper-pagination-fraction {position:relative; left:auto; bottom:auto; right:0; width:100%; text-align:center; font-weight:600; font-size:15px; line-height:23px; color:#64637B; letter-spacing:0.05em}
+}
 
 .hemorrhoids-footer {position:relative; padding:120px 0 0 0}
 .hemorrhoids-footer::before {content:""; position:absolute; left:50%; margin-left:-960px; top:0; width:1920px; height:643px; background:url(../images/hemorrhoids-footer.jpg) no-repeat; z-index:-1; pointer-events:none}
@@ -1102,4 +1195,21 @@ footer {position:relative; margin:120px 0 0 0}
 
 @media (max-width:1199px) {
     .up-link {left:auto; margin:0; right:10px; bottom:10px; box-shadow:0px 5px 15px rgba(0, 0, 0, 0.15)}
+}
+
+.disclaimer {position:fixed; left:0; bottom:0; right:0; z-index:91; background:rgba(82, 66, 158, 0.8); padding:6px 0}
+.disclaimer .container {display:flex; align-items:center; justify-content:space-between}
+.disclaimer-text img {display:block}
+.disclaimer-text-mobile {display:none}
+.disclaimer-close {min-width:30px; max-width:30px}
+.disclaimer-close svg {display:block; width:30px; height:30px; fill:#FFFFFF; transition:fill 0.2s}
+.disclaimer-close:hover svg {fill:rgba(255, 255, 255, 0.8)}
+
+@media (max-width:1199px) {
+    .disclaimer {padding:6px 0 10px 0}
+    .disclaimer-text {display:none}
+    .disclaimer-text-mobile {display:block}
+    .disclaimer-text-mobile img {display:block}
+    .disclaimer-close {position:absolute; right:10px; top:5px; min-width:24px; max-width:24px}
+    .disclaimer-close svg {width:24px; height:24px}
 }
