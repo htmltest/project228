@@ -799,11 +799,15 @@ header.fixed .header-buy .btn {border-radius:0}
     .varicose-about-text {min-width:0; max-width:none; margin:20px 0 0 0}
 }
 
-.smartleg {position:fixed; z-index:98; right:0; top:50%; width:66px; transform:translateY(-50%)}
+.smartleg {position:fixed; z-index:98; right:-10px; top:50%; width:76px; transform:translateY(-50%); transition:right 0.2s}
+.smartleg:hover {right:0}
 .smartleg img {display:block; width:100%}
+.smartleg img+img {display:none}
 
 @media (max-width:1199px) {
-    .smartleg {display:none}
+    .smartleg {width:30px; right:0}
+    .smartleg img {display:none}
+    .smartleg img+img {display:block}
 }
 
 .main-welcome {position:relative; padding:60px 0 0 0}
@@ -1223,7 +1227,7 @@ footer {position:relative; margin:120px 0 0 0}
 .disclaimer-close:hover svg {fill:rgba(255, 255, 255, 0.8)}
 
 @media (max-width:1199px) {
-    .disclaimer {padding:6px 0 10px 0}
+    .disclaimer {padding:10px 0 6px 0}
     .disclaimer-text {display:none}
     .disclaimer-text-mobile {display:block}
     .disclaimer-text-mobile img {display:block}
