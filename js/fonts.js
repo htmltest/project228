@@ -19,6 +19,10 @@ if (sessionStorage.fontsLoaded) {
         var Gilroy500 = new FontFaceObserver('Gilroy', {
             weight: '500'
         });
+        var Gilroy500i = new FontFaceObserver('Gilroy', {
+            style: 'italic',
+            weight: '500'
+        });
         var Gilroy600 = new FontFaceObserver('Gilroy', {
             weight: '600'
         });
@@ -39,6 +43,7 @@ if (sessionStorage.fontsLoaded) {
         Promise.all([
             Gilroy400.load(),
             Gilroy500.load(),
+            Gilroy500i.load(),
             Gilroy600.load(),
             Gilroy700.load(),
             FiraSansCondensed600.load(),

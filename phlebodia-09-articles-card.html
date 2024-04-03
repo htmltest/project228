@@ -6,6 +6,7 @@
 
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="js/select2/select2.css">
 
         <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png">
@@ -54,7 +55,7 @@
                                     <li><a href="#">Геморрой</a></li>
                                     <li><a href="#">Инструкции</a></li>
                                     <li><a href="#">Продукты</a></li>
-                                    <li><a href="#">Cпециалистам</a></li>
+                                    <li class="expert-link"><a href="#">Cпециалистам</a></li>
                                     <li><a href="#">Акции</a></li>
                                     <li><a href="#">О&nbsp;компании</a></li>
                                 </ul>
@@ -77,6 +78,7 @@
                 <div class="container">
 
                     <div class="breadcrumbs"><a href="#">Флебодия</a><svg><use xlink:href="images/sprite.svg#breadcrumbs"></use></svg><a href="#">Статьи</a><svg><use xlink:href="images/sprite.svg#breadcrumbs"></use></svg>Беременность и&nbsp;хронические заболевания вен нижних конечностей тесно связаны</div>
+                    <div class="breadcrumbs-mobile"><a href="#"><svg><use xlink:href="images/sprite.svg#breadcrumbs-mobile"></use></svg>Статьи</a></div>
 
                     <!-- article card -->
                     <div class="article-card">
@@ -90,6 +92,12 @@
                                 <div class="article-card-view"><svg><use xlink:href="images/sprite.svg#article-view"></use></svg>301</div>
                                 <div class="article-card-share">
                                     <div class="article-card-share-link"><a href="#" class="btn btn-small btn-red"><svg><use xlink:href="images/sprite.svg#article-share"></use></svg>Поделиться</a></div>
+                                    <div class="article-card-share-window">
+                                        <a href="#" class="share-link-vk"><svg><use xlink:href="images/sprite.svg#share-icon-vk"></use></svg></a>
+                                        <a href="#" class="share-link-whatsapp"><svg><use xlink:href="images/sprite.svg#share-icon-whatsapp"></use></svg></a>
+                                        <a href="#" class="share-link-telegram"><svg><use xlink:href="images/sprite.svg#share-icon-telegram"></use></svg></a>
+                                        <a href="#" class="share-link-facebook"><svg><use xlink:href="images/sprite.svg#share-icon-facebook"></use></svg></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -157,6 +165,8 @@
                     </div>
                     <!-- article card END -->
 
+                    <div class="back-link"><a href="#"><svg><use xlink:href="images/sprite.svg#back-link"></use></svg>Вернуться к&nbsp;статьям</a></div>
+
                     <div class="article-notice">
                         <div class="article-notice-header">
                             <h2>Помните!</h2>
@@ -174,33 +184,56 @@
 
                     <div class="article-disclamer">1. Российские клинические рекомендации по&nbsp;диагностике и&nbsp;лечению хронических заболеваний вен. Флебология.&nbsp;2018; 12 (3): 135&nbsp;&mdash; 229</div>
 
-                    <div class="article-products">
-                        <div class="article-products-title">Продукция при варикозе</div>
-                        <div class="article-products-list">
-                            <div class="article-products-item">
-                                <div class="article-products-item-title">Таблетки</div>
-                                <div class="article-products-item-img"><img src="images/article-products-1.png" alt=""></div>
-                                <div class="article-products-item-info">
-                                    <div class="article-products-item-info-item"><svg><use xlink:href="images/sprite.svg#varicose-alarm"></use></svg>1&nbsp;таблетка в&nbsp;день во&nbsp;время еды</div>
-                                    <div class="article-products-item-info-item"><svg><use xlink:href="images/sprite.svg#varicose-calendar"></use></svg>2&nbsp;месяца</div>
+                    <!-- section -->
+                    <div class="section">
+                        <div class="section-title">Для лечения варикоза и&nbsp;ухода за&nbsp;кожей ног</div>
+                        <div class="varicose-types-menu">
+                            <a href="#" class="active">Флебодиа 600</a>
+                            <a href="#">Крем-гель Флебодиа</a>
+                        </div>
+                        <div class="varicose-types">
+                            <div class="varicose-type active">
+                                <div class="varicose-type-title">Флебодиа 600</div>
+                                <div class="varicose-type-text"><span>для лечения</span> варикоза и&nbsp;других заболеваний вен: уменьшает симптомы тяжести, усталости, распирания, боли, усиливающейся к&nbsp;концу дня, отёков<sup class="notice-link" data-id="3">3</sup></div>
+                                <div class="varicose-type-img">
+                                    <div class="varicose-type-img-box"><img src="images/varicose-type-img-box.jpg" alt=""><img src="images/varicose-type-img-box-mobile.jpg" alt=""><span>РУ ЛП-№ (003656) РГ-RU</span></div>
                                 </div>
-                                <div class="article-products-item-link"><a href="#" class="btn btn-small btn-blue">Подробнее о&nbsp;таблетках</a></div>
+                                <div class="varicose-type-scheme">
+                                    <div class="varicose-type-scheme-item">
+                                        <svg><use xlink:href="images/sprite.svg#varicose-alarm"></use></svg>
+                                        1&nbsp;таблетка в&nbsp;день<br> во&nbsp;время еды
+                                    </div>
+                                    <div class="varicose-type-scheme-item">
+                                        <svg><use xlink:href="images/sprite.svg#varicose-calendar"></use></svg>
+                                        2&nbsp;месяца
+                                    </div>
+                                </div>
+                                <div class="varicose-type-link"><a href="#" class="btn btn-small btn-blue">Подробнее о&nbsp;таблетках</a></div>
                             </div>
-
-                            <div class="article-products-item">
-                                <div class="article-products-item-title">Крем-гель</div>
-                                <div class="article-products-item-img"><img src="images/article-products-2.png" alt=""></div>
-                                <div class="article-products-item-info">
-                                    <div class="article-products-item-info-item"><svg><use xlink:href="images/sprite.svg#varicose-alarm"></use></svg>2&nbsp;раза в&nbsp;день</div>
-                                    <div class="article-products-item-info-item"><svg><use xlink:href="images/sprite.svg#varicose-night"></use></svg>2&nbsp;месяца</div>
+                            <div class="varicose-type">
+                                <div class="varicose-type-title">Крем-гель Флебодиа</div>
+                                <div class="varicose-type-text"><span>для ухода</span> за&nbsp;кожей ног: снимает чувство тяжести и&nbsp;усталости, восстанавливает ощущение комфорта, ухаживает за&nbsp;кожей ног</div>
+                                <div class="varicose-type-img">
+                                    <div class="varicose-type-img-tube"><img src="images/varicose-type-img-tube.jpg" alt=""><img src="images/varicose-type-img-tube-mobile.jpg" alt=""><span>ЕАЭС № RU Д-LV.АГ81.8.04118</span></div>
                                 </div>
-                                <div class="article-products-item-link"><a href="#" class="btn btn-small btn-blue">Подробнее о&nbsp;крем-геле</a></div>
+                                <div class="varicose-type-scheme">
+                                    <div class="varicose-type-scheme-item">
+                                        <svg><use xlink:href="images/sprite.svg#varicose-alarm"></use></svg>
+                                        2&nbsp;раза<br> утром и&nbsp;вечером
+                                    </div>
+                                    <div class="varicose-type-scheme-item">
+                                        <svg><use xlink:href="images/sprite.svg#varicose-calendar"></use></svg>
+                                        Регулярно
+                                    </div>
+                                </div>
+                                <div class="varicose-type-link"><a href="#" class="btn btn-small btn-blue">Подробнее о&nbsp;крем-геле</a></div>
                             </div>
                         </div>
                     </div>
+                    <!-- section END -->
 
                     <div class="section section-articles main-articles">
-                        <div class="section-title">Другие статьи</div>
+                        <div class="section-title">Полезные статьи</div>
                         <div class="section-articles-list">
                             <div class="section-articles-item">
                                 <a href="#">
@@ -269,7 +302,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="section-articles-all"><a href="#">Смотреть все</a></div>
+                        <div class="section-articles-all"><a href="#"><span>Смотреть все</span><svg><use xlink:href="images/sprite.svg#articles-all-mobile"></use></svg></a></div>
                     </div>
                     <!-- section END -->
 
@@ -287,8 +320,6 @@
                         </div>
                     </div>
                     <!-- section END -->
-                    
-                    <div class="back-link"><a href="#"><svg><use xlink:href="images/sprite.svg#back-link"></use></svg>Вернуться к&nbsp;статьям</a></div>
 
                 </div>
                 <!-- container END -->
@@ -299,16 +330,11 @@
             <footer>
                 <div class="footer-contacts">
                     <div class="container">
+                        <div class="footer-contacts-feedback">Сообщить о&nbsp;нежелательном явлении</div>
                         <div class="footer-contacts-list">
-                            <div class="footer-contacts-list-item">
-                                <a href="tel:+74956400458"><svg><use xlink:href="images/sprite.svg#footer-contacts-phone"></use></svg>+7 (495) 640 04 58</a>
-                            </div>
                             <div class="footer-contacts-list-item">
                                 <a href="mailto:innotech@innotech.ru"><svg><use xlink:href="images/sprite.svg#footer-contacts-email"></use></svg>innotech@innotech.ru</a>
                             </div>
-                        </div>
-                        <div class="footer-contacts-feedback">
-                            <div class="footer-contacts-feedback-title">Остались вопросы и&nbsp;предложения?</div>
                         </div>
                     </div>
                 </div>
@@ -325,7 +351,7 @@
                                     <li><a href="#">Варикоз</a></li>
                                     <li><a href="#">Геморрой</a></li>
                                     <li><a href="#">Инструкция</a></li>
-                                    <li><a href="#">Экспертам</a></li>
+                                    <li class="expert-link"><a href="#">Экспертам</a></li>
                                     <li><a href="#">О&nbsp;компании</a></li>
                                     <li><a href="#">Акции</a></li>
                                     <li><a href="#">Статьи</a></li>
@@ -337,7 +363,7 @@
                             <div class="footer-container-innotech-logo"><img src="images/footer-innotech.png" alt=""></div>
                             <div class="footer-container-innotech-text">
                                 <p>Садовническая набережная, дом 71, Москва, Россия 115035</p>
-                                <p>Номера рег. удостоверений: ФЛЕБОДИА 600: П&nbsp;N016081/01<br> Номер фарм. лицензии: &#8470; ФС-99-02-004522 от&nbsp;25.03.2015</p>
+                                <p>Номера рег. удостоверений: ФЛЕБОДИА 600: ЛП-&#8470; (003656) РГ-RU<br> Номер фарм. лицензии: &#8470; ФС-99-02-004522 от&nbsp;25.03.2015</p>
                                 <p>Владельцем сайта phlebodia.ru является ООО &laquo;ИННОТЕК&raquo;, которое полностью отвечает за&nbsp;его содержимое. Сайт ориентирован на&nbsp;физических и&nbsp;юридических лиц из&nbsp;России.</p>
                             </div>
                         </div>
@@ -355,7 +381,7 @@
                             </div>
                         </div>
                         <div class="footer-bottom-text">
-                            <p>Бренд флебодиа 600 признан маркой &#8470;&nbsp;1&nbsp;в категории &laquo;Венотонизирующее средство&raquo; по&nbsp;результатам общенационального голосования &laquo;Народная марка&raquo;,<br> ООО &laquo;Народная марка&raquo;, 2023&nbsp;г.</p>
+                            <p>Бренд Флебодиа 600 признан маркой &#8470;&nbsp;1&nbsp;в категории &laquo;Венотонизирующее средство&raquo; по&nbsp;результатам общенационального голосования &laquo;Народная марка&raquo;,<br> ООО &laquo;Народная марка&raquo;, 2023&nbsp;г.</p>
                             <p>Информация, размещенная на&nbsp;сайте, носит справочный характер и&nbsp;не&nbsp;может считаться консультацией медицинского работника или заменить&nbsp;её. Для получения более подробной информации мы&nbsp;рекомендуем вам обратиться к&nbsp;специалисту.</p>
                         </div>
                     </div>
@@ -373,6 +399,15 @@
 
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/swiper/swiper-bundle.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/fileupload/jquery.ui.widget.js"></script>
+        <script src="js/fileupload/jquery.iframe-transport.js"></script>
+        <script src="js/fileupload/jquery.fileupload.js"></script>
+        <script src="js/fileupload/jquery.fileupload-ui.js"></script>
         <script src="js/tools.js"></script>
 
     </body>

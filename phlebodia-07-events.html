@@ -6,6 +6,7 @@
 
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="js/select2/select2.css">
 
         <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png">
@@ -54,7 +55,7 @@
                                     <li><a href="#">Геморрой</a></li>
                                     <li><a href="#">Инструкции</a></li>
                                     <li><a href="#">Продукты</a></li>
-                                    <li><a href="#">Cпециалистам</a></li>
+                                    <li class="expert-link"><a href="#">Cпециалистам</a></li>
                                     <li class="active"><a href="#">Акции</a></li>
                                     <li><a href="#">О&nbsp;компании</a></li>
                                 </ul>
@@ -77,9 +78,11 @@
                 <div class="container">
 
                     <div class="breadcrumbs"><a href="#">Флебодия</a><svg><use xlink:href="images/sprite.svg#breadcrumbs"></use></svg>Акции</div>
+                    <div class="breadcrumbs-mobile"><a href="#"><svg><use xlink:href="images/sprite.svg#breadcrumbs-mobile"></use></svg>На&nbsp;главную</a></div>
 
                     <!-- events -->
                     <div class="events">
+                        <h1>Акции</h1>
                         <!-- events list -->
                         <div class="events-list">
                             <div class="events-item">
@@ -132,16 +135,11 @@
             <footer>
                 <div class="footer-contacts">
                     <div class="container">
+                        <div class="footer-contacts-feedback">Сообщить о&nbsp;нежелательном явлении</div>
                         <div class="footer-contacts-list">
-                            <div class="footer-contacts-list-item">
-                                <a href="tel:+74956400458"><svg><use xlink:href="images/sprite.svg#footer-contacts-phone"></use></svg>+7 (495) 640 04 58</a>
-                            </div>
                             <div class="footer-contacts-list-item">
                                 <a href="mailto:innotech@innotech.ru"><svg><use xlink:href="images/sprite.svg#footer-contacts-email"></use></svg>innotech@innotech.ru</a>
                             </div>
-                        </div>
-                        <div class="footer-contacts-feedback">
-                            <div class="footer-contacts-feedback-title">Остались вопросы и&nbsp;предложения?</div>
                         </div>
                     </div>
                 </div>
@@ -158,7 +156,7 @@
                                     <li><a href="#">Варикоз</a></li>
                                     <li><a href="#">Геморрой</a></li>
                                     <li><a href="#">Инструкция</a></li>
-                                    <li><a href="#">Экспертам</a></li>
+                                    <li class="expert-link"><a href="#">Экспертам</a></li>
                                     <li><a href="#">О&nbsp;компании</a></li>
                                     <li><a href="#">Акции</a></li>
                                     <li><a href="#">Статьи</a></li>
@@ -170,7 +168,7 @@
                             <div class="footer-container-innotech-logo"><img src="images/footer-innotech.png" alt=""></div>
                             <div class="footer-container-innotech-text">
                                 <p>Садовническая набережная, дом 71, Москва, Россия 115035</p>
-                                <p>Номера рег. удостоверений: ФЛЕБОДИА 600: П&nbsp;N016081/01<br> Номер фарм. лицензии: &#8470; ФС-99-02-004522 от&nbsp;25.03.2015</p>
+                                <p>Номера рег. удостоверений: ФЛЕБОДИА 600: ЛП-&#8470; (003656) РГ-RU<br> Номер фарм. лицензии: &#8470; ФС-99-02-004522 от&nbsp;25.03.2015</p>
                                 <p>Владельцем сайта phlebodia.ru является ООО &laquo;ИННОТЕК&raquo;, которое полностью отвечает за&nbsp;его содержимое. Сайт ориентирован на&nbsp;физических и&nbsp;юридических лиц из&nbsp;России.</p>
                             </div>
                         </div>
@@ -188,7 +186,7 @@
                             </div>
                         </div>
                         <div class="footer-bottom-text">
-                            <p>Бренд флебодиа 600 признан маркой &#8470;&nbsp;1&nbsp;в категории &laquo;Венотонизирующее средство&raquo; по&nbsp;результатам общенационального голосования &laquo;Народная марка&raquo;,<br> ООО &laquo;Народная марка&raquo;, 2023&nbsp;г.</p>
+                            <p>Бренд Флебодиа 600 признан маркой &#8470;&nbsp;1&nbsp;в категории &laquo;Венотонизирующее средство&raquo; по&nbsp;результатам общенационального голосования &laquo;Народная марка&raquo;,<br> ООО &laquo;Народная марка&raquo;, 2023&nbsp;г.</p>
                             <p>Информация, размещенная на&nbsp;сайте, носит справочный характер и&nbsp;не&nbsp;может считаться консультацией медицинского работника или заменить&nbsp;её. Для получения более подробной информации мы&nbsp;рекомендуем вам обратиться к&nbsp;специалисту.</p>
                         </div>
                     </div>
@@ -206,6 +204,15 @@
 
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/swiper/swiper-bundle.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/fileupload/jquery.ui.widget.js"></script>
+        <script src="js/fileupload/jquery.iframe-transport.js"></script>
+        <script src="js/fileupload/jquery.fileupload.js"></script>
+        <script src="js/fileupload/jquery.fileupload-ui.js"></script>
         <script src="js/tools.js"></script>
 
     </body>

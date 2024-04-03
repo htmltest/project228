@@ -6,6 +6,7 @@
 
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="js/select2/select2.css">
 
         <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png">
@@ -54,7 +55,7 @@
                                     <li class="active"><a href="#">Геморрой</a></li>
                                     <li><a href="#">Инструкции</a></li>
                                     <li><a href="#">Продукты</a></li>
-                                    <li><a href="#">Cпециалистам</a></li>
+                                    <li class="expert-link"><a href="#">Cпециалистам</a></li>
                                     <li><a href="#">Акции</a></li>
                                     <li><a href="#">О&nbsp;компании</a></li>
                                 </ul>
@@ -84,11 +85,11 @@
                         <div class="hemorrhoids-welcome-title">Чувствовать жизнь, <span>а&nbsp;не&nbsp;геморрой!</span></div>
                         <div class="hemorrhoids-welcome-img">
                             <img src="images/hemorrhoids-welcome-img.png" alt="">
-                            <span>РУ П N016081/01</span>
+                            <span>РУ ЛП-№ (003656) РГ-RU</span>
                         </div>
                         <div class="hemorrhoids-welcome-img-mobile">
                             <img src="images/hemorrhoids-welcome-img-mobile.png" alt="">
-                            <span>РУ П N016081/01</span>
+                            <span>РУ ЛП-№ (003656) РГ-RU</span>
                         </div>
                     </div>
                     <!-- hemorrhoids welcome END -->
@@ -136,8 +137,8 @@
                         <div class="section-title">Уменьшает <span>боль, отёк, кровотечение<sup class="notice-link" data-id="1">1,</sup><sup class="notice-link" data-id="2">&nbsp;2</sup></span> при геморрое</div>
                         <div class="hemorrhoids-reasons-content">
                             <div class="hemorrhoids-reasons-img">
-                                <div class="hemorrhoids-reasons-box"><img src="images/hemorrhoids-reasons-box.jpg" alt=""><span>РУ П N016081/01</span></div>
-                                <div class="hemorrhoids-reasons-box-mobile"><img src="images/hemorrhoids-reasons-box-mobile.jpg" alt=""><span>РУ П N016081/01</span></div>
+                                <div class="hemorrhoids-reasons-box"><img src="images/hemorrhoids-reasons-box.jpg" alt=""><span>РУ ЛП-№ (003656) РГ-RU</span></div>
+                                <div class="hemorrhoids-reasons-box-mobile"><img src="images/hemorrhoids-reasons-box-mobile.jpg" alt=""><span>РУ ЛП-№ (003656) РГ-RU</span></div>
                                 <div class="hemorrhoids-reasons-brand"><img src="images/brand-1.svg" alt=""></div>
                             </div>
                             <div class="hemorrhoids-reasons-list">
@@ -187,7 +188,7 @@
                                     </div>
                                     <div class="hemorrhoids-how-acute-first">
                                         <div class="hemorrhoids-how-acute-first-title">Первые 4&nbsp;дня:</div>
-                                        <div class="hemorrhoids-how-acute-first-text">По&nbsp;1&nbsp;табл./3 раза в&nbsp;сутки во&nbsp;время еды</div>
+                                        <div class="hemorrhoids-how-acute-first-text">1&nbsp;таблетка х&nbsp;3&nbsp;раза в&nbsp;сутки во&nbsp;время еды</div>
                                         <div class="hemorrhoids-how-acute-first-days">
                                             <div class="hemorrhoids-how-acute-first-day">День 1</div>
                                             <div class="hemorrhoids-how-acute-first-day">День 2</div>
@@ -199,7 +200,7 @@
                                     </div>
                                     <div class="hemorrhoids-how-acute-second">
                                         <div class="hemorrhoids-how-acute-second-title">В&nbsp;последующие 3&nbsp;дня:</div>
-                                        <div class="hemorrhoids-how-acute-second-text">По&nbsp;1&nbsp;табл./2 раза в&nbsp;сутки во&nbsp;время еды</div>
+                                        <div class="hemorrhoids-how-acute-second-text">1&nbsp;таблетка х&nbsp;2&nbsp;раза в&nbsp;сутки во&nbsp;время еды</div>
                                         <div class="hemorrhoids-how-acute-second-days">
                                             <div class="hemorrhoids-how-acute-second-day">День 5</div>
                                             <div class="hemorrhoids-how-acute-second-day">День 6</div>
@@ -217,7 +218,7 @@
                             <div class="hemorrhoids-how-sep"></div>
                             <div class="hemorrhoids-how-item">
                                 <div class="hemorrhoids-how-chronic-title">Хронический геморрой</div>
-                                <div class="hemorrhoids-how-chronic-text">По&nbsp;1&nbsp;табл./1 раз в&nbsp;сутки во&nbsp;время еды 1-2&nbsp;мес.</div>
+                                <div class="hemorrhoids-how-chronic-text">1&nbsp;таблетка х&nbsp;1&nbsp;раз в&nbsp;сутки во&nbsp;время еды</div>
                                 <div class="hemorrhoids-how-chronic-scheme"><img src="images/hemorrhoids-how-chronic.png" alt=""></div>
                                 <div class="hemorrhoids-how-chronic-scheme-mobile"><img src="images/hemorrhoids-how-chronic-mobile.png" alt=""></div>
                             </div>
@@ -230,41 +231,43 @@
                         <div class="section-title">О&nbsp;геморрое</div>
                         <div class="hemorrhoids-about-anonce">Геморрой&nbsp;&mdash; патологическое увеличение геморроидальных узлов прямой кишки</div>
                         <div class="hemorrhoids-about-subtitle">Хронический геморрой. Классификация<sup class="notice-link" data-id="4">4</sup></div>
-                        <div class="hemorrhoids-about-list swiper">
-                            <div class="hemorrhoids-about-list-inner swiper-wrapper">
-                                <div class="hemorrhoids-about-item swiper-slide">
-                                    <div class="hemorrhoids-about-item-content">
-                                        <div class="hemorrhoids-about-item-title">1&nbsp;стадия</div>
-                                        <div class="hemorrhoids-about-item-text">Кровотечение без выпадения узлов</div>
+                        <div class="hemorrhoids-about-list-wrapper">
+                            <div class="hemorrhoids-about-list swiper">
+                                <div class="hemorrhoids-about-list-inner swiper-wrapper">
+                                    <div class="hemorrhoids-about-item swiper-slide">
+                                        <div class="hemorrhoids-about-item-img"><img src="images/hemorrhoids-about-1.jpg" alt=""></div>
+                                        <div class="hemorrhoids-about-item-content">
+                                            <div class="hemorrhoids-about-item-title">1&nbsp;стадия</div>
+                                            <div class="hemorrhoids-about-item-text">Кровотечение без выпадения узлов</div>
+                                        </div>
                                     </div>
-                                    <div class="hemorrhoids-about-item-img"><img src="images/hemorrhoids-about-1.jpg" alt=""></div>
-                                </div>
-                                <div class="hemorrhoids-about-item swiper-slide">
-                                    <div class="hemorrhoids-about-item-content">
-                                        <div class="hemorrhoids-about-item-title">2&nbsp;стадия</div>
-                                        <div class="hemorrhoids-about-item-text">Выпадение внутренних геморроидальных узлов с&nbsp;самостоятельным вправлением в&nbsp;анальный канал, с/без кровотечения</div>
+                                    <div class="hemorrhoids-about-item swiper-slide">
+                                        <div class="hemorrhoids-about-item-img"><img src="images/hemorrhoids-about-2.jpg" alt=""></div>
+                                        <div class="hemorrhoids-about-item-content">
+                                            <div class="hemorrhoids-about-item-title">2&nbsp;стадия</div>
+                                            <div class="hemorrhoids-about-item-text">Выпадение внутренних геморроидальных узлов с&nbsp;самостоятельным вправлением в&nbsp;анальный канал, с/без кровотечения</div>
+                                        </div>
                                     </div>
-                                    <div class="hemorrhoids-about-item-img"><img src="images/hemorrhoids-about-2.jpg" alt=""></div>
-                                </div>
-                                <div class="hemorrhoids-about-item swiper-slide">
-                                    <div class="hemorrhoids-about-item-content">
-                                        <div class="hemorrhoids-about-item-title">3&nbsp;стадия</div>
-                                        <div class="hemorrhoids-about-item-text">Выпадение внутренних геморроидальных узлов с&nbsp;необходимостью их&nbsp;ручного вправления в&nbsp;анальный канал, с/без кровотечения</div>
+                                    <div class="hemorrhoids-about-item swiper-slide">
+                                        <div class="hemorrhoids-about-item-img"><img src="images/hemorrhoids-about-3.jpg" alt=""></div>
+                                        <div class="hemorrhoids-about-item-content">
+                                            <div class="hemorrhoids-about-item-title">3&nbsp;стадия</div>
+                                            <div class="hemorrhoids-about-item-text">Выпадение внутренних геморроидальных узлов с&nbsp;необходимостью их&nbsp;ручного вправления в&nbsp;анальный канал, с/без кровотечения</div>
+                                        </div>
                                     </div>
-                                    <div class="hemorrhoids-about-item-img"><img src="images/hemorrhoids-about-3.jpg" alt=""></div>
-                                </div>
-                                <div class="hemorrhoids-about-item swiper-slide">
-                                    <div class="hemorrhoids-about-item-content">
-                                        <div class="hemorrhoids-about-item-title">4&nbsp;стадия</div>
-                                        <div class="hemorrhoids-about-item-text">Постоянное выпадение внутренних геморроидальных узлов и&nbsp;невозможность их&nbsp;вправления в&nbsp;анальный канал, с/без кровотечения</div>
+                                    <div class="hemorrhoids-about-item swiper-slide">
+                                        <div class="hemorrhoids-about-item-img"><img src="images/hemorrhoids-about-4.jpg" alt=""></div>
+                                        <div class="hemorrhoids-about-item-content">
+                                            <div class="hemorrhoids-about-item-title">4&nbsp;стадия</div>
+                                            <div class="hemorrhoids-about-item-text">Постоянное выпадение внутренних геморроидальных узлов и&nbsp;невозможность их&nbsp;вправления в&nbsp;анальный канал, с/без кровотечения</div>
+                                        </div>
                                     </div>
-                                    <div class="hemorrhoids-about-item-img"><img src="images/hemorrhoids-about-4.jpg" alt=""></div>
                                 </div>
                             </div>
                             <div class="hemorrhoids-about-list-ctrl">
-                                <div class="swiper-button-prev"><svg><use xlink:href="images/sprite.svg#hemorrhoids-about-list-prev"></use></svg></div>
+                                <div class="swiper-button-prev"><svg><use xlink:href="images/sprite.svg#hemorrhoids-about-list-prev"></use></svg><svg><use xlink:href="images/sprite.svg#hemorrhoids-about-list-prev-desktop"></use></svg></div>
                                 <div class="swiper-pagination"></div>
-                                <div class="swiper-button-next">Следующая стадия<svg><use xlink:href="images/sprite.svg#hemorrhoids-about-list-next"></use></svg></div>
+                                <div class="swiper-button-next"><span>Следующая стадия</span><svg><use xlink:href="images/sprite.svg#hemorrhoids-about-list-next"></use></svg><svg><use xlink:href="images/sprite.svg#hemorrhoids-about-list-next-desktop"></use></svg></div>
                             </div>
                         </div>
                     </div>
@@ -326,7 +329,7 @@
                                 <div class="swiper-button-next"><svg><use xlink:href="images/sprite.svg#section-articles-list-next"></use></svg></div>
                             </div>
                         </div>
-                        <div class="section-articles-all"><a href="#">Смотреть все</a></div>
+                        <div class="section-articles-all"><a href="#"><span>Смотреть все</span><svg><use xlink:href="images/sprite.svg#articles-all-mobile"></use></svg></a></div>
                     </div>
                     <!-- section END -->
 
@@ -334,38 +337,35 @@
                     <div class="section section-buy" id="buy">
                         <div class="section-title">Где купить?</div>
                         <div class="section-buy-content">
-                            <div class="section-buy-box">
-                                <div class="section-buy-box-inner">
-                                    <div class="section-buy-box-img"><img src="images/buy-box.png" alt=""><img src="images/buy-box-mobile.png" alt=""><span>РУ П N016081/01</span></div>
-                                    <div class="section-buy-box-brand"><img src="images/brand-1.svg" alt=""></div>
+                            <div class="section-buy-variants">
+                                <div class="section-buy-variants-container">
+                                    <div class="section-buy-variants-item active">
+                                        <div class="section-buy-variants-item-img box"><img src="images/buy-box-2.png" alt=""><span>РУ ЛП-№ (003656) РГ-RU</span></div>
+                                        <div class="section-buy-variants-item-brand"><img src="images/brand-1.svg" alt=""></div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="section-buy-list">
                                 <div class="section-buy-list-inner active">
                                     <div class="section-buy-list-item">
-                                        <a href="https://www.ozon.ru/product/innotek-flebodia-600-tabletki-pokrytye-plenochnoy-obolochkoy-600mg-18-149024474/?asb=Uo55CLAdevl6sxEGrO2DgdXWgZbasGVYJ251eazyoZCCXUUkxDCWDof5X%252Fpu8%252BWt&asb2=tQ3YzFGuru2573GCTn8aVDTv4oMeDpi5o5CtvN6ZlIrdttw2tWQMPc17-_rtuZ1c_Dh6FXF8HwSbPaIByL5VLlz6rrQeTNt1LsPjpP0ByZ1Y90u6IuU9C9Uk4Iuktf2gx2Ka7aqe7lkdu1vX0QYUrE60cdNWMzckJ_J4bLas3qsu4yAxE2GDJ_fqImoyPrQG&avtc=1&avte=2&avts=1709195877&keywords=%D1%84%D0%BB%D0%B5%D0%B1%D0%BE%D0%B4%D0%B8%D0%B0+600" target="_blank"><img src="files/buy-logo-01.png" alt=""></a>
+                                        <a href="https://www.ozon.ru/product/innotek-flebodia-600-tabletki-pokrytye-plenochnoy-obolochkoy-600mg-18-149024474/?asb=Uo55CLAdevl6sxEGrO2DgdXWgZbasGVYJ251eazyoZCCXUUkxDCWDof5X%252Fpu8%252BWt&asb2=tQ3YzFGuru2573GCTn8aVDTv4oMeDpi5o5CtvN6ZlIrdttw2tWQMPc17-_rtuZ1c_Dh6FXF8HwSbPaIByL5VLlz6rrQeTNt1LsPjpP0ByZ1Y90u6IuU9C9Uk4Iuktf2gx2Ka7aqe7lkdu1vX0QYUrE60cdNWMzckJ_J4bLas3qsu4yAxE2GDJ_fqImoyPrQG&avtc=1&avte=2&avts=1709195877&keywords=%D1%84%D0%BB%D0%B5%D0%B1%D0%BE%D0%B4%D0%B8%D0%B0+600" target="_blank"><img src="files/buy-logo-ozon.png" alt=""></a>
                                     </div>
                                     <div class="section-buy-list-item">
-                                        <a href="https://zdravcity.ru/p_flebodia-600-tab-p-o-plen-600mg-n18-0090942.html" target="_blank"><img src="files/buy-logo-02.png" alt=""></a>
+                                        <a href="#" target="_blank"><img src="files/buy-logo-eapteka.png" alt=""></a>
                                     </div>
                                     <div class="section-buy-list-item">
-                                        <a href="https://www.rigla.ru/product/105431" target="_blank"><img src="files/buy-logo-03.png" alt=""></a>
+                                        <a href="https://neopharm.ru/drugs/39857" target="_blank"><img src="files/buy-logo-neofarm.png" alt=""></a>
                                     </div>
                                     <div class="section-buy-list-item">
-                                        <a href="https://www.budzdorov.ru/product/105431" target="_blank"><img src="files/buy-logo-04.png" alt=""></a>
+                                        <a href="#" target="_blank"><img src="files/buy-logo-planet.png" alt=""></a>
+                                    </div>
+                                    <div class="section-buy-list-item-all">
+                                        <div class="section-buy-list-item-all-text">
+                                            <div class="section-buy-list-item-all-text-inner">Узнать о&nbsp;наличии<br> и&nbsp;цене в&nbsp;ближайших<br> к&nbsp;вам <a href="windows/buy.html" class="window-link">аптеках</a></div>
+                                        </div>
                                     </div>
                                     <div class="section-buy-list-item">
-                                        <a href="https://neopharm.ru/drugs/39857" target="_blank"><img src="files/buy-logo-05.png" alt=""></a>
-                                    </div>
-                                    <div class="section-buy-list-item">
-                                        <a href="https://farmlend.ru/moskva/product/267985" target="_blank"><img src="files/buy-logo-06.png" alt=""></a>
-                                    </div>
-                                    <div class="section-buy-list-uteka">
-                                        <div class="section-buy-list-item-uteka-text">Узнать о&nbsp;наличии и&nbsp;цене в&nbsp;ближайших к&nbsp;вам аптеках можно на&nbsp;сервисе Ютека</div>
-                                        <div class="section-buy-list-item-uteka-link"><a href="#">Все аптеки</a></div>
-                                    </div>
-                                    <div class="section-buy-list-item">
-                                        <a href="https://polza.ru/catalog/flebodia-600-tabletki-pokryt-plen-ob-600-mg-18-sht_13734/?sphrase_id=2831151" target="_blank"><img src="files/buy-logo-07.png" alt=""></a>
+                                        <a href="https://www.rigla.ru/product/105431" target="_blank"><img src="files/buy-logo-rigla.png" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -397,11 +397,12 @@
                                 <p>Процесс производства препаратов контролируется в&nbsp;соответствии с&nbsp;европейскими стандартами.</p>
                                 <p>Все усилия и&nbsp;опыт специалистов компании направлены на&nbsp;достижение общей цели&nbsp;&mdash; обеспечение пациентов препаратами для лечения распространённых заболеваний и&nbsp;улучшения качества жизни.</p>
                             </div>
+                            <div class="innotech-footer-text-more"><a href="#"><svg><use xlink:href="images/sprite.svg#text-more-link"></use></svg><span>Подробнее</span><span>Свернуть</span></a></div>
                         </div>
 
                         <div class="notices">
                             <div class="notices-title">Сноски</div>
-                            <div class="notices-list open">
+                            <div class="notices-list">
                                 <div class="notices-item" data-id="1">
                                     <div class="notices-item-number">1.</div>
                                     <div class="notices-item-text">Оказывает венотоническое действие через 2&nbsp;часа после приема первой дозы. Barbe&nbsp;R.<br> Etude de&nbsp;la&nbsp;dur&eacute;e d&rsquo;action du&nbsp;Diovenor avec contr&ocirc;le par pl&eacute;thysmographie, Tribune m&eacute;dicale N&nbsp;270, 49-50, 1988</div>
@@ -433,16 +434,11 @@
             <footer>
                 <div class="footer-contacts">
                     <div class="container">
+                        <div class="footer-contacts-feedback">Сообщить о&nbsp;нежелательном явлении</div>
                         <div class="footer-contacts-list">
-                            <div class="footer-contacts-list-item">
-                                <a href="tel:+74956400458"><svg><use xlink:href="images/sprite.svg#footer-contacts-phone"></use></svg>+7 (495) 640 04 58</a>
-                            </div>
                             <div class="footer-contacts-list-item">
                                 <a href="mailto:innotech@innotech.ru"><svg><use xlink:href="images/sprite.svg#footer-contacts-email"></use></svg>innotech@innotech.ru</a>
                             </div>
-                        </div>
-                        <div class="footer-contacts-feedback">
-                            <div class="footer-contacts-feedback-title">Остались вопросы и&nbsp;предложения?</div>
                         </div>
                     </div>
                 </div>
@@ -459,7 +455,7 @@
                                     <li><a href="#">Варикоз</a></li>
                                     <li><a href="#">Геморрой</a></li>
                                     <li><a href="#">Инструкция</a></li>
-                                    <li><a href="#">Экспертам</a></li>
+                                    <li class="expert-link"><a href="#">Экспертам</a></li>
                                     <li><a href="#">О&nbsp;компании</a></li>
                                     <li><a href="#">Акции</a></li>
                                     <li><a href="#">Статьи</a></li>
@@ -471,7 +467,7 @@
                             <div class="footer-container-innotech-logo"><img src="images/footer-innotech.png" alt=""></div>
                             <div class="footer-container-innotech-text">
                                 <p>Садовническая набережная, дом 71, Москва, Россия 115035</p>
-                                <p>Номера рег. удостоверений: ФЛЕБОДИА 600: П&nbsp;N016081/01<br> Номер фарм. лицензии: &#8470; ФС-99-02-004522 от&nbsp;25.03.2015</p>
+                                <p>Номера рег. удостоверений: ФЛЕБОДИА 600: ЛП-&#8470; (003656) РГ-RU<br> Номер фарм. лицензии: &#8470; ФС-99-02-004522 от&nbsp;25.03.2015</p>
                                 <p>Владельцем сайта phlebodia.ru является ООО &laquo;ИННОТЕК&raquo;, которое полностью отвечает за&nbsp;его содержимое. Сайт ориентирован на&nbsp;физических и&nbsp;юридических лиц из&nbsp;России.</p>
                             </div>
                         </div>
@@ -489,7 +485,7 @@
                             </div>
                         </div>
                         <div class="footer-bottom-text">
-                            <p>Бренд флебодиа 600 признан маркой &#8470;&nbsp;1&nbsp;в категории &laquo;Венотонизирующее средство&raquo; по&nbsp;результатам общенационального голосования &laquo;Народная марка&raquo;,<br> ООО &laquo;Народная марка&raquo;, 2023&nbsp;г.</p>
+                            <p>Бренд Флебодиа 600 признан маркой &#8470;&nbsp;1&nbsp;в категории &laquo;Венотонизирующее средство&raquo; по&nbsp;результатам общенационального голосования &laquo;Народная марка&raquo;,<br> ООО &laquo;Народная марка&raquo;, 2023&nbsp;г.</p>
                             <p>Информация, размещенная на&nbsp;сайте, носит справочный характер и&nbsp;не&nbsp;может считаться консультацией медицинского работника или заменить&nbsp;её. Для получения более подробной информации мы&nbsp;рекомендуем вам обратиться к&nbsp;специалисту.</p>
                         </div>
                     </div>
@@ -507,6 +503,15 @@
 
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/swiper/swiper-bundle.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/fileupload/jquery.ui.widget.js"></script>
+        <script src="js/fileupload/jquery.iframe-transport.js"></script>
+        <script src="js/fileupload/jquery.fileupload.js"></script>
+        <script src="js/fileupload/jquery.fileupload-ui.js"></script>
         <script src="js/tools.js"></script>
 
     </body>
