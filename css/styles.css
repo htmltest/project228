@@ -757,9 +757,9 @@ header.fixed .header-buy .btn {border-radius:0}
 .hemorrhoids-how-acute-second-scheme img {display:block; margin:0 auto}
 .hemorrhoids-how-acute-second-scheme-mobile {display:none}
 .hemorrhoids-how-acute-second-hints {padding:0 0 68px 0; margin:0 0 0 10px; min-width:178px; max-width:178px; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase}
-.hemorrhoids-how-acute-second-hint {margin:50px 0 0 0; display:flex; align-items:center; justify-content:space-between; width:178px}
+.hemorrhoids-how-acute-second-hint {margin:50px 0 0 0; display:flex; align-items:center; width:178px}
 .hemorrhoids-how-acute-second-hint:first-child {margin:0}
-.hemorrhoids-how-acute-second-hint::before {content:""; width:118px; height:1px; background:#403AAC}
+.hemorrhoids-how-acute-second-hint::before {content:""; width:118px; margin:0 12px 0 0; height:1px; background:#403AAC}
 .hemorrhoids-how-sep {margin:40px 0; height:1px; background:rgba(0, 0, 0, 0.1)}
 .hemorrhoids-how-chronic-title {text-align:center; font-weight:bold; font-size:24px; line-height:31px; color:#EA5C8D}
 .hemorrhoids-how-chronic-text {text-align:center; font-size:24px; line-height:31px; color:#3E3E59}
@@ -980,7 +980,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .varicose-how-list {margin:30px 0 0 0; display:flex; justify-content:space-between}
 .varicose-how-item {min-width:calc(50% - 10px); max-width:calc(50% - 10px); padding:36px; text-align:center; background:#FFFFFF; border-radius:10px; box-shadow:0px 0px 40px rgba(64, 58, 172, 0.25)}
 .varicose-how-item-title {font-weight:bold; font-size:24px; line-height:34px; text-transform:uppercase; color:#8C0E72}
-.varicose-how-item-title sup {display:inline-block; vertical-align:top; margin:6px 3px 0 3px; font-weight:500; font-size:18px; line-height:18px; border-bottom:1px dotted #8C0E72; transition:border-color 0.2s}
+.varicose-how-item-title sup {display:inline-block; vertical-align:top; margin:3px 3px 0 3px; font-weight:500; font-size:18px; line-height:18px; border-bottom:1px dotted #8C0E72; transition:border-color 0.2s}
 .varicose-how-item-title sup:hover {border-color:transparent}
 .varicose-how-item-text {margin:6px auto 0 auto; font-size:24px; line-height:34px; color:#3E3E59; max-width:420px}
 .varicose-how-item-text p {margin:6px 0 0 0}
@@ -1040,7 +1040,8 @@ header.fixed .header-buy .btn {border-radius:0}
 .varicose-types {margin:40px -10px 0 -10px; display:flex}
 .varicose-type {min-width:50%; max-width:50%; padding:0 10px}
 .varicose-type:nth-child(2) {border-left:1px solid rgba(168, 168, 191, 0.5); position:relative}
-.varicose-type-title {font-weight:600; font-size:24px; line-height:31px; color:#3E3E59; text-align:center}
+.varicose-type-title {font-weight:600; font-size:24px; line-height:31px; color:#403AAC; text-align:center}
+.varicose-type-title sup {vertical-align:top; line-height:1em; font-size:0.6em; position:relative; top:3px}
 .varicose-type-text {margin:20px auto 0 auto; max-width:540px; font-size:20px; line-height:30px; text-align:center; min-height:90px; position:relative; z-index:1}
 .varicose-type-text span {font-weight:bold; color:#EA5C8D}
 .varicose-type-text sup {vertical-align:top; line-height:1em; font-size:0.6em; border-bottom:1px dotted #EA5C8D; cursor:pointer; transition:border-color 0.2s}
@@ -1063,6 +1064,7 @@ header.fixed .header-buy .btn {border-radius:0}
     .varicose-types-menu {display:flex; margin:20px 0 0 0}
     .varicose-types-menu a {min-width:50%; max-width:50%; font-weight:bold; font-size:20px; line-height:26px; color:#5C5C73; text-align:center; border-bottom:1px solid #FFFFFF; padding:5px 0 0 0; border-radius:6px 6px 0 0}
     .varicose-types-menu a.active {background:#F4F2FF; color:#EA5C8D; border-bottom-color:#EA5C8D}
+    .varicose-types-menu sup {vertical-align:top; line-height:1em; font-size:0.6em; position:relative; top:3px}
     .varicose-types {margin:40px 0 0 0; display:block}
     .varicose-type {min-width:0; max-width:none; padding:0; display:none}
     .varicose-type:nth-child(2) {border-left:none}
@@ -1307,9 +1309,9 @@ header.fixed .header-buy .btn {border-radius:0}
 .fonts-loaded .product-others-title {font-family:FiraSansCondensed, sans-serif}
 .product-others-list {display:flex; flex-wrap:wrap; margin:20px -10px 0 -10px}
 .product-others-item {min-width:33.33%; max-width:33.33%; padding:20px 10px 0 10px; display:flex}
-.product-others-item-inner {display:flex; width:100%; position:relative}
-.product-others-item-link {display:flex; flex-direction:column; width:100%; border:1px solid #E9E6F3; background:#FFFFFF; border-radius:12px; padding:24px 20px; transition:border-color 0.2s; position:relative; overflow:hidden}
-.product-others-item-link:hover {border-color:#787B8E}
+.product-others-item-inner {display:flex; width:100%; position:relative; transition:transform 0.2s}
+.product-others-item-inner:hover {transform:translateY(-5px)}
+.product-others-item-link {display:flex; flex-direction:column; width:100%; border:1px solid #E9E6F3; background:#FFFFFF; border-radius:12px; padding:24px 20px; position:relative; overflow:hidden}
 .product-others-item-preview {display:flex; margin:-24px -20px 0 -20px; border-radius:12px 12px 0 0}
 .product-others-item-preview img {display:block; width:100%}
 .product-others-item-title {margin:20px 0 0 0; height:100%; font-weight:600; font-size:24px; line-height:31px; color:#5C5C73}
