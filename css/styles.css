@@ -936,8 +936,8 @@ header.fixed .header-buy .btn {border-radius:0}
 }
 
 .varicose-welcome {position:relative; padding:60px 0 0 0}
-.varicose-welcome::before {content:""; position:absolute; left:50%; top:-51px; width:1920px; height:1134px; margin:0 0 0 -960px; background:url(../images/varicose-welcome-bg.jpg) no-repeat; z-index:-1; pointer-events:none}
-.varicose-welcome-title {font-weight:600; font-size:48px; line-height:58px; color:#403AAC}
+.varicose-welcome::before {content:""; position:absolute; left:50%; top:-51px; width:1920px; height:1134px; margin:0 0 0 -960px; background:url(../images/varicose-welcome-bg.png) no-repeat; pointer-events:none}
+.varicose-welcome-title {font-weight:600; font-size:48px; line-height:58px; color:#403AAC; position:relative}
 .fonts-loaded .varicose-welcome-title {font-family:FiraSansCondensed, sans-serif}
 .varicose-welcome-content {height:560px; position:relative}
 .varicose-welcome-box {position:absolute; left:-4px; top:16px; width:761px}
@@ -957,7 +957,7 @@ header.fixed .header-buy .btn {border-radius:0}
 
 @media (max-width:1199px) {
     .varicose-welcome {padding:40px 0 0 0}
-    .varicose-welcome::before {left:-15px; top:-90px; right:-15px; bottom:0; width:auto; height:auto; margin:0; background:url(../images/varicose-welcome-bg-mobile.jpg) no-repeat center bottom; background-size:cover}
+    .varicose-welcome::before {left:-15px; top:-90px; right:-15px; bottom:0; width:auto; height:auto; margin:0; background:url(../images/varicose-welcome-bg-mobile.jpg) no-repeat center bottom; background-size:cover; z-index:-1}
     .varicose-welcome-title {font-size:30px; line-height:36px; text-align:center}
     .varicose-welcome-content {height:663px; max-width:345px; margin:0 auto}
     .varicose-welcome-box {left:14px; top:19px; width:346px}
@@ -973,7 +973,7 @@ header.fixed .header-buy .btn {border-radius:0}
     .varicose-welcome-text-3 {right:30px; bottom:130px}
 }
 
-.varicose-how {margin:0}
+.varicose-how {margin:0; position:relative}
 .varicose-how .section-title sup {display:inline-block; vertical-align:top; margin:0 0 0 8px; font-weight:500; font-size:18px; line-height:18px; border-bottom:1px dotted #403AAC; transition:border-color 0.2s}
 .varicose-how .section-title sup:hover {border-bottom-color:transparent}
 .fonts-loaded .varicose-how .section-title sup {font-family:Gilroy, sans-serif}

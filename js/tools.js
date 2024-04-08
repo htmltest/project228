@@ -697,6 +697,7 @@ $(window).on('load resize', function() {
                 slidesPerView: 2,
                 pagination: {
                     el: $('.hemorrhoids-about-list-ctrl .swiper-pagination')[0],
+                    clickable: true,
                 },
                 navigation: {
                     nextEl: $('.hemorrhoids-about-list-ctrl .swiper-button-next')[0],
