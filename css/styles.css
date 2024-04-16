@@ -426,12 +426,14 @@ header.fixed .header-buy .btn {border-radius:0}
     .header-menu ul li {margin:0; border-top:1px solid rgba(168, 168, 191, 0.2)}
     .header-menu ul li a {padding:20px 56px 20px 20px; color:#403AAC; border-radius:0; position:relative}
     .header-menu ul li.active a::after {content:""; position:absolute; right:20px; top:17px; width:36px; height:36px; background:url(../images/header-menu-active.svg) no-repeat}
-    .header-buy {display:none}
+    .header-buy {display:none; margin:0; border-top:1px solid rgba(168, 168, 191, 0.2); padding:20px 20px 0 20px}
+    .menu-mobile-open .header-buy {display:block}
+    .header-buy .btn {width:100%}
 }
 
 .header-mobile {display:none}
 @media (max-width:1199px) {
-    .header-mobile {display:block; border-top:1px solid rgba(168, 168, 191, 0.2); padding:20px}
+    .header-mobile {display:block; padding:12px 20px 20px 20px}
     .header-mobile-contacts a {display:flex; margin:10px 0 0 0; align-items:center; justify-content:center; border:1px solid #E9E6F3; border-radius:4px; padding:15px 0 13px 0; color:#5C5C73; font-weight:600; font-size:15px; line-height:20px; text-decoration:none}
     .header-mobile-contacts a:first-child {margin:0}
     .header-mobile-contacts a svg {width:19px; height:19px; margin:-2px 10px 0 0; fill:#A8A8BF}
@@ -947,13 +949,39 @@ header.fixed .header-buy .btn {border-radius:0}
 .varicose-welcome-box-label-2 {position:absolute; right:30px; top:151px; font-size:10px; line-height:15px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
 .varicose-welcome-brand {position:absolute; left:-18px; top:324px; width:130px}
 .varicose-welcome-brand img {display:block; width:100%}
-.varicose-welcome-legs {position:absolute; right:-7px; bottom:0; width:340px}
+.varicose-welcome-legs {position:absolute; right:7px; bottom:0; width:312px}
 .varicose-welcome-legs img {display:block; width:100%}
 .varicose-welcome-text {position:absolute; font-weight:600; font-size:48px; line-height:58px; color:#6F2782}
 .fonts-loaded .varicose-welcome-text {font-family:FiraSansCondensed, sans-serif}
-.varicose-welcome-text-1 {right:276px; bottom:395px}
-.varicose-welcome-text-2 {right:309px; bottom:319px}
-.varicose-welcome-text-3 {right:297px; bottom:243px}
+.varicose-welcome-text-1 {right:276px; bottom:395px; animation:legAnim1 8s ease-in-out infinite}
+.varicose-welcome-text-2 {right:309px; bottom:319px; animation:legAnim2 8s ease-in-out infinite}
+.varicose-welcome-text-3 {right:297px; bottom:243px; animation:legAnim3 8s ease-in-out infinite}
+
+.varicose-welcome-legs-1 {animation:legAnim1 8s ease-in-out infinite}
+.varicose-welcome-legs-2 {animation:legAnim2 8s ease-in-out infinite}
+.varicose-welcome-legs-3 {animation:legAnim3 8s ease-in-out infinite}
+
+@-webkit-keyframes legAnim1 {
+    0% {opacity:1}
+    25% {opacity:0}
+    50% {opacity:0}
+    75% {opacity:0}
+    to {opacity:1}
+}
+@-webkit-keyframes legAnim2 {
+    0% {opacity:1}
+    25% {opacity:1}
+    50% {opacity:0}
+    75% {opacity:0}
+    to {opacity:1}
+}
+@-webkit-keyframes legAnim3 {
+    0% {opacity:1}
+    25% {opacity:1}
+    50% {opacity:1}
+    75% {opacity:0}
+    to {opacity:1}
+}
 
 @media (max-width:1199px) {
     .varicose-welcome {padding:40px 0 0 0}
@@ -1019,7 +1047,10 @@ header.fixed .header-buy .btn {border-radius:0}
 .varicose-reasons-item-info svg {display:block; width:24px; height:24px; fill:rgba(92, 92, 115, 0.5); transition:fill 0.2s}
 .varicose-reasons-item-info:hover svg {fill:#EE8F9F}
 .varicose-reasons-item-info-text {display:none; position:absolute; right:-85px; top:27px; width:350px; padding:20px; font-weight:500; font-size:15px; line-height:23px; letter-spacing:0.01em; background:#FFFFFF; border-radius:6px; box-shadow:0px 0px 24px rgba(0, 0, 0, 0.1); color:#3E3E59}
+.varicose-reasons-item-info-text::before {content:""; position:absolute; left:0; top:-27px; right:0; height:27px; background:transparent}
 .varicose-reasons-item-info:hover .varicose-reasons-item-info-text {display:block}
+.varicose-reasons-item-info-text sup {display:inline-block; vertical-align:top; margin:0 0 0 3px; font-weight:500; font-size:10px; line-height:10px; border-bottom:1px dotted #3E3E59; transition:border-color 0.2s}
+.varicose-reasons-item-info-text sup:hover {border-color:transparent}
 
 @media (max-width:1199px) {
     .varicose-reasons {display:block; margin:20px 0 0 0}
@@ -1876,4 +1907,63 @@ footer {position:relative; margin:120px 0 0 0}
 
 @media (max-width:1199px) {
     .window-general {width:335px}
+}
+
+.page-404 {margin:60px 0 80px 0; position:relative}
+.page-404::before {content:""; position:absolute; left:50%; top:124px; width:1920px; height:126px; margin:0 0 0 -960px; background:url(../images/page-404-bg.svg) no-repeat; background-size:100%}
+.page-404-title {position:relative; text-align:center; font-weight:600; font-size:300px; line-height:390px; color:#403AAC}
+.fonts-loaded .page-404-title {font-family:FiraSansCondensed, sans-serif}
+.page-404-text {position:relative; text-align:center; font-weight:600; font-size:36px; line-height:43px; color:#403AAC}
+.fonts-loaded .page-404-text {font-family:FiraSansCondensed, sans-serif}
+.page-404-link {margin:40px 0 0 0; display:flex; justify-content:center}
+.page-404-link a {display:flex; align-items:center; padding:10px 20px; font-size:18px; line-height:25px; color:#3E3E59; background:#F7F5FF; border-radius:4px; transition:background 0.2s, color 0.2s}
+.page-404-link a:hover {color:#FFFFFF; background:#403AAC}
+.page-404-link a svg {width:26px; height:26px; margin:0 10px 0 0; fill:#3E3E59; transition:fill 0.2s}
+.page-404-link a:hover svg {fill:#FFFFFF}
+
+@media (max-width:1199px) {
+    .page-404 {margin:100px 0}
+    .page-404::before {width:485px; height:32px; top:31px; margin:0 0 0 -243px}
+    .page-404-title {font-size:72px; line-height:94px}
+    .page-404-text {font-size:24px; line-height:29px}
+}
+
+.page-404+.main-footer {padding:120px 0 0 0; min-height:511px; margin:0 0 -120px 0}
+.page-404+.main-footer::before {height:511px; background-position:center -80px}
+
+@media (max-width:1199px) {
+    .page-404+.main-footer {padding:80px 0 0 0; min-height:0; margin:0}
+}
+
+.page-unavailable .wrapper-inner {padding-top:60px}
+.header-unavailable {display:flex; align-items:center}
+
+@media (max-width:1199px) {
+    .page-unavailable .wrapper-inner {padding-top:16px}
+}
+
+.unavailable {margin:200px 0; position:relative}
+.unavailable::before {content:""; position:absolute; left:50%; top:-200px; width:1680px; height:572px; margin:0 0 0 -840px; background:url(../images/page-unavailable.svg) no-repeat; background-size:100%}
+.unavailable-title {max-width:320px; font-weight:600; font-size:48px; line-height:58px; color:#403AAC; position:relative}
+.fonts-loaded .unavailable-title {font-family:FiraSansCondensed, sans-serif}
+.unavailable-text {position:relative; max-width:320px; margin:20px 0 0 0; font-size:20px; line-height:30px}
+
+@media (max-width:1199px) {
+    .unavailable {margin:307px 0 100px 0}
+    .unavailable::before {top:-231px; width:447px; height:213px; margin:0 0 0 -223px; background:url(../images/page-unavailable-mobile.svg) no-repeat; background-size:100%}
+    .unavailable-title {max-width:240px; font-size:36px; line-height:43px}
+    .unavailable-text {max-width:280px; font-size:18px; line-height:27px}
+}
+
+.footer-unavailable {background:#E9E6F3; padding:20px 0}
+.footer-unavailable .container {display:flex; align-items:center; justify-content:space-between}
+.footer-unavailable-left {display:flex; align-items:center}
+.footer-unavailable-logo svg {display:block; width:185px; height:40px; fill:#403AAC}
+.footer-unavailable-brand {margin:0 0 0 20px; width:40px}
+.footer-unavailable-brand img {display:block; width:100%}
+.footer-unavailable-copyrights {font-weight:normal; font-size:15px; line-height:23px}
+
+@media (max-width:1199px) {
+    .footer-unavailable .container {display:block}
+    .footer-unavailable-copyrights {margin:20px 0 0 0}
 }
