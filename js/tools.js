@@ -269,6 +269,11 @@ $(document).ready(function() {
     $('.page-link').click(function(e) {
         var curBlock = $(this.hash);
         if (curBlock.length == 1) {
+            if ($('html').hasClass('menu-mobile-open')) {
+                $('html').removeClass('menu-mobile-open');
+                $('meta[name="viewport"]').attr('content', 'width=device-width');
+                $(window).scrollTop($('html').data('scrollTop'));
+            }
             $('html, body').animate({'scrollTop': curBlock.offset().top - $('header').outerHeight() - 20});
             e.preventDefault();
         }
