@@ -377,14 +377,14 @@ header.fixed .container {height:39px}
 }
 
 .header-left {display:flex; align-items:center}
-.header-logo svg {display:block; width:185px; height:40px; fill:#403AAC; transition:width 0.2s, height 0.2s}
-header.fixed .header-logo svg {width:111px; height:24px}
+.header-logo svg {display:block; width:186px; height:30px; fill:#403AAC; transition:width 0.2s, height 0.2s}
+header.fixed .header-logo svg {width:111px; height:18px}
 .header-brand {margin:0 0 0 20px}
 .header-brand img {display:block; width:40px; height:40px; transition:width 0.2s, height 0.2s}
 header.fixed .header-brand img {width:24px; height:24px}
 
 @media (max-width:1199px) {
-    .header-logo svg {width:148px; height:32px}
+    .header-logo svg {width:148px; height:24px}
     header.fixed .header-logo svg {width:111px; height:24px}
     .header-brand {margin:0 0 0 10px}
     .header-brand img {width:36px; height:36px}
@@ -1699,7 +1699,7 @@ footer {position:relative; margin:120px 0 0 0}
 .footer-container {background:#F8F8FC; padding:30px 0}
 .footer-container .container {display:flex}
 .footer-container-info {display:flex; justify-content:space-between; min-width:531px; max-width:531px; padding:0 80px 0 0; border-right:1px solid rgba(168, 168, 191, 0.5)}
-.footer-container-logo svg {display:block; width:161px; height:35px; fill:#403AAC}
+.footer-container-logo svg {display:block; width:161px; height:26px; fill:#403AAC}
 .footer-container-buy {margin:20px 0 0 0}
 .footer-container-buy .btn {min-width:161px}
 .footer-container-menu {font-size:15px; line-height:23px}
@@ -1716,7 +1716,7 @@ footer {position:relative; margin:120px 0 0 0}
     .footer-container {position:relative; padding:20px 0}
     .footer-container .container {display:block}
     .footer-container-info {display:block; min-width:0; max-width:none; padding:0; border-right:none}
-    .footer-container-logo svg {width:165px; height:36px}
+    .footer-container-logo svg {width:165px; height:27px}
     .footer-container-buy .btn {min-width:100%; padding-left:0; padding-right:0}
     .footer-container-menu {margin:20px 0 0 0; font-size:18px; line-height:27px; border-top:1px solid rgba(168, 168, 191, 0.2)}
     .footer-container-menu ul {margin:0; column-count:1}
