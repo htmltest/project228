@@ -569,7 +569,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .section-buy-variants-item-img img {display:block; width:100%}
 .section-buy-variants-item-img span {position:absolute; font-size:10px; line-height:15px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
 .section-buy-variants-item-img.box span {right:33px; top:267px}
-.section-buy-variants-item-img.tube span {right:69px; top:201px}
+.section-buy-variants-item-img.tube span {right:0; top:201px}
 .section-buy-variants-item-brand {position:absolute; left:77px; top:245px; width:110px}
 .section-buy-variants-item-brand img {display:block; width:100%}
 .section-buy-variants-menu {margin:20px 0 0 0; display:flex; justify-content:center}
@@ -589,8 +589,8 @@ header.fixed .header-buy .btn {border-radius:0}
 .section-buy-list-item-all {min-width:50%; max-width:50%; padding:20px 10px 0 10px}
 .section-buy-list-item-all-text {font-weight:600; display:flex; justify-content:center; flex-direction:column; height:153px}
 .section-buy-list-item-all-text-inner a {border-bottom:1px dashed rgba(64, 58, 172, 0.25)}
-.section-buy-services {display:flex; margin:60px 0 0 0; justify-content:space-between}
-.section-buy-services a {display:flex; padding:24px; align-items:center; justify-content:space-between; color:#3E3E59; min-width:calc(50% - 10px); max-width:calc(50% - 10px); justify-content:space-between; border-radius:12px; background:#FFFFFF; box-shadow:0px 4px 40px rgba(0, 0, 0, 0.15); transition:transform 0.2s}
+.section-buy-services {display:flex; margin:60px -10px 0 -10px; justify-content:flex-end}
+.section-buy-services a {display:flex; padding:24px; align-items:center; justify-content:space-between; color:#3E3E59; min-width:calc(50% - 20px); max-width:calc(50% - 20px); margin:0 10px; justify-content:space-between; border-radius:12px; background:#FFFFFF; box-shadow:0px 4px 40px rgba(0, 0, 0, 0.15); transition:transform 0.2s}
 .section-buy-services a:hover {transform:translateY(-5px)}
 .section-buy-services a span {font-weight:600; font-size:24px; line-height:31px; max-width:170px}
 .section-buy-services a img {height:93px}
@@ -603,7 +603,7 @@ header.fixed .header-buy .btn {border-radius:0}
     .section-buy-content {display:block}
     .section-buy-variants {min-width:0; max-width:345px; margin:0 auto; height:275px}
     .section-buy-variants-item-img.box span {right:-5px; top:135px}
-    .section-buy-variants-item-img.tube span {right:10px; top:90px}
+    .section-buy-variants-item-img.tube span {right:-25px; top:120px}
     .section-buy-variants-item-brand {left:39px; top:159px; width:72px}
     .section-buy-list {min-width:0; max-width:none; margin:35px 0 0 0}
     .section-buy-list-inner {margin:-15px 0 0 -15px}
@@ -887,7 +887,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .innotech-footer-header {display:flex; align-items:center}
 .innotech-footer-header-logo {min-width:270px; max-width:270px}
 .innotech-footer-header-logo img {display:block; width:100%}
-.innotech-footer-header-text {margin:0 0 0 20px; min-width:232px; max-width:232px; font-weight:600; font-size:26px; line-height:34px; color:#403AAC}
+.innotech-footer-header-text {margin:0 0 0 20px; min-width:232px; max-width:232px; font-weight:600; font-size:26px; line-height:34px; color:#3E3E59}
 .fonts-loaded .innotech-footer-header-text {font-family:FiraSansCondensed, sans-serif}
 .innotech-footer-mobile-photo {display:none}
 .innotech-footer-text {margin:40px 0 0 0; max-width:490px}
@@ -942,11 +942,11 @@ header.fixed .header-buy .btn {border-radius:0}
 .varicose-welcome-title {font-weight:600; font-size:48px; line-height:58px; color:#403AAC; position:relative}
 .fonts-loaded .varicose-welcome-title {font-family:FiraSansCondensed, sans-serif}
 .varicose-welcome-content {height:560px; position:relative}
-.varicose-welcome-box {position:absolute; left:-4px; top:16px; width:761px}
+.varicose-welcome-box {position:absolute; left:-4px; top:93px; width:757px}
 .varicose-welcome-box img {display:block; width:100%}
 .varicose-welcome-box img+img {display:none}
-.varicose-welcome-box-label-1 {position:absolute; right:269px; top:146px; font-size:10px; line-height:15px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
-.varicose-welcome-box-label-2 {position:absolute; right:30px; top:151px; font-size:10px; line-height:15px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
+.varicose-welcome-box-label-1 {position:absolute; right:263px; top:70px; font-size:10px; line-height:15px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
+.varicose-welcome-box-label-2 {position:absolute; right:-8px; top:337px; font-size:10px; line-height:15px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
 .varicose-welcome-brand {position:absolute; left:-18px; top:324px; width:130px}
 .varicose-welcome-brand img {display:block; width:100%}
 .varicose-welcome-legs {position:absolute; right:7px; bottom:0; width:312px}
@@ -988,11 +988,11 @@ header.fixed .header-buy .btn {border-radius:0}
     .varicose-welcome::before {left:-15px; top:-90px; right:-15px; bottom:0; width:auto; height:auto; margin:0; background:url(../images/varicose-welcome-bg-mobile.jpg) no-repeat center bottom; background-size:cover; z-index:-1}
     .varicose-welcome-title {font-size:30px; line-height:36px; text-align:center}
     .varicose-welcome-content {height:663px; max-width:345px; margin:0 auto}
-    .varicose-welcome-box {left:14px; top:19px; width:346px}
+    .varicose-welcome-box {left:13px; top:55px; width:331px}
     .varicose-welcome-box img {display:none}
     .varicose-welcome-box img+img {display:block}
-    .varicose-welcome-box-label-1 {right:72px; top:94px}
-    .varicose-welcome-box-label-2 {right:-35px; top:105px}
+    .varicose-welcome-box-label-1 {right:53px; top:66px}
+    .varicose-welcome-box-label-2 {right:-45px; top:122px}
     .varicose-welcome-brand {left:5px; top:173px; width:80px}
     .varicose-welcome-legs {right:101px; bottom:79px; width:152px}
     .varicose-welcome-text {font-size:30px; line-height:36px}
@@ -1007,7 +1007,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .fonts-loaded .varicose-how .section-title sup {font-family:Gilroy, sans-serif}
 .varicose-how-list {margin:30px 0 0 0; display:flex; justify-content:space-between}
 .varicose-how-item {min-width:calc(50% - 10px); max-width:calc(50% - 10px); padding:36px; text-align:center; background:#FFFFFF; border-radius:10px; box-shadow:0px 0px 40px rgba(64, 58, 172, 0.25)}
-.varicose-how-item-title {font-weight:bold; font-size:24px; line-height:34px; text-transform:uppercase; color:#8C0E72}
+.varicose-how-item-title {font-weight:bold; font-size:24px; line-height:34px; text-transform:uppercase; color:#6F2782}
 .varicose-how-item-title sup {display:inline-block; vertical-align:top; margin:3px 3px 0 3px; font-weight:500; font-size:18px; line-height:18px; border-bottom:1px dotted #8C0E72; transition:border-color 0.2s}
 .varicose-how-item-title sup:hover {border-color:transparent}
 .varicose-how-item-text {margin:6px auto 0 auto; font-size:24px; line-height:34px; color:#3E3E59; max-width:420px}
@@ -1089,6 +1089,8 @@ header.fixed .header-buy .btn {border-radius:0}
 .varicose-type-img-tube img {display:block; width:100%}
 .varicose-type-img-tube img+img {display:none}
 .varicose-type-img-tube span {position:absolute; right:-33px; top:175px; font-size:10px; line-height:15px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
+.varicose-type-brand {position:absolute; left:25px; top:200px; width:89px}
+.varicose-type-brand img {display:block; width:100%}
 .varicose-type-scheme {display:flex; margin:0 35px; position:relative; justify-content:space-between; z-index:1}
 .varicose-type-scheme-item {min-width:calc(50% - 5px); max-width:calc(50% - 5px); padding:12px 16px; font-weight:600; line-height:23px; text-align:center; background:#FFFFFF; border-radius:12px; box-shadow:0px 0px 30px rgba(0, 0, 0, 0.1)}
 .varicose-type-scheme-item svg {display:block; width:24px; height:24px; margin:0 auto 6px auto; fill:#EE8F9F}
@@ -1114,6 +1116,7 @@ header.fixed .header-buy .btn {border-radius:0}
     .varicose-type-img-tube img {display:none}
     .varicose-type-img-tube img+img {display:block}
     .varicose-type-img-tube span {right:-40px; top:118px}
+    .varicose-type-brand {left:-10px; top:213px; width:41px}
     .varicose-type-scheme {display:block; margin:0}
     .varicose-type-scheme-item {margin:10px 0 0 0; min-width:0; max-width:none; padding:12px 16px}
     .varicose-type-scheme-item:first-child {margin:0}
