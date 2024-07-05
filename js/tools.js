@@ -646,8 +646,6 @@ $(window).on('load', function() {
 
 $(window).on('load resize scroll', function() {
     var windowScroll = $(window).scrollTop();
-
-    var windowScroll = $(window).scrollTop();
     $('body').append('<div id="body-test-height" style="position:fixed; left:0; top:0; right:0; bottom:0; z-index:-1"></div>');
     var windowHeight = $('#body-test-height').height();
     $('#body-test-height').remove();
@@ -668,6 +666,12 @@ $(window).on('load resize scroll', function() {
             $('.up-link').addClass('visible');
         } else {
             $('.up-link').removeClass('visible');
+        }
+
+        if (windowScroll + windowHeight > $('.footer-container').offset().top - 5) {
+            $('.up-link').css({'margin-bottom': (windowScroll + windowHeight) - $('.footer-container').offset().top + 5});
+        } else {
+            $('.up-link').css({'margin-bottom': 0});
         }
     }
 });
