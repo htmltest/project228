@@ -1510,7 +1510,6 @@ header.fixed .header-buy .btn {border-radius:0}
     .events-item {padding:15px; display:block}
     .events-item-preview {min-width:0; max-width:none; margin:0}
     .events-item-content {width:auto; margin:20px 0 0 0; display:block}
-    .events-item-anonce {max-height:108px; position:relative; overflow:hidden; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical}
     .events-item-link {height:auto; display:block; margin:15px 0 0 0}
     .events-item-link .btn {font-size:12px; line-height:17px}
 }
