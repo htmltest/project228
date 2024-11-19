@@ -363,7 +363,6 @@ $(document).ready(function() {
     });
 
     $('body').on('click', '.window-expert-btn-yes', function(e) {
-        $('.expert-link').addClass('visible');
         windowClose();
         e.preventDefault();
     });
@@ -631,6 +630,100 @@ $(document).ready(function() {
                 $('.window-photo-close').trigger('click');
             }
         }
+    });
+
+    $('.header-menu > ul > li > a').click(function(e) {
+        var curLi = $(this).parent();
+        if ($(window).width() < 1200 && curLi.find('.header-submenu').length == 1) {
+            $('html').toggleClass('header-submenu-open');
+            curLi.toggleClass('open');
+            e.preventDefault();
+        }
+    });
+
+    $('.awards-list').each(function() {
+        if ($('.awards-item').length > 3) {
+            $('.awards-more').addClass('visible');
+        }
+    });
+
+    $('.awards-more a').click(function(e) {
+        $('.awards-more').toggleClass('open');
+        $('.awards-item:gt(2)').slideToggle();
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.video-link', function(e) {
+        var curLink = $(this);
+
+        var curWidth = $(window).width();
+        if (curWidth < 375) {
+            curWidth = 375;
+        }
+
+        var curScroll = $(window).scrollTop();
+        $('html').addClass('window-video-open');
+        $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
+        $('html').data('scrollTop', curScroll);
+
+        var windowHTML =    '<div class="window-video">';
+
+        windowHTML +=           '<a href="#" class="window-video-close"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#window-photo-close"></use></svg></a>';
+
+        var videoLink = curLink.attr('href');
+        if (videoLink.indexOf('?') != -1) {
+            videoLink += '&amp;rel=0&amp;autoplay=1';
+        } else {
+            videoLink += '?rel=0&amp;autoplay=1';
+        }
+
+        windowHTML +=           '<div class="window-video-player"><iframe width="560" height="315" src="' + videoLink + '" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+
+        windowHTML +=       '</div>';
+
+        $('.window-video').remove();
+        $('body').append(windowHTML);
+
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.window-video-close', function(e) {
+        $('.window-video').remove();
+        $('html').removeClass('window-video-open');
+        $('meta[name="viewport"]').attr('content', 'width=device-width');
+        $(window).scrollTop($('html').data('scrollTop'));
+        e.preventDefault();
+    });
+
+    $('body').on('keyup', function(e) {
+        if (e.keyCode == 27) {
+            if ($('.window-video').length > 0) {
+                $('.window-video-close').trigger('click');
+            }
+        }
+    });
+
+    $('.faq-item-title').click(function() {
+        var curItem = $(this).parent();
+        curItem.toggleClass('open');
+        curItem.find('.faq-item-text').slideToggle();
+    });
+
+    $('.hemorrhoids-welcome-slider').each(function() {
+        var curSlider = $(this);
+
+        const swiper = new Swiper(curSlider.find('.swiper')[0], {
+            loop: true,
+            touchAngle: 30,
+            navigation: {
+                nextEl: curSlider.find('.swiper-button-next')[0],
+                prevEl: curSlider.find('.swiper-button-prev')[0],
+            },
+            pagination: {
+                el: curSlider.find('.swiper-pagination')[0],
+                clickable: true,
+            },
+        });
     });
 
 });

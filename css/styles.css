@@ -42,7 +42,10 @@ ol ol li::before {content:counter(point)'.'counter(subpoint); counter-increment:
 .blockquote {margin:20px 0 0 0; padding:0 0 0 49px; border-left:1px solid #403AAC; font-weight:500; font-style:italic; font-size:18px; line-height:27px; color:#403AAC}
 
 @media (max-width:1199px) {
-    h1 {margin:40px 0 20px 0}
+    h1 {margin:40px 0 20px 0; font-size:30px; line-height:42px}
+    h2 {margin:40px 0 20px 0; font-size:20px; line-height:28px}
+    h3 {margin:40px 0 20px 0; font-size:20px; line-height:28px}
+    h4 {margin:40px 0 20px 0; font-size:20px; line-height:28px}
     .blockquote {padding:0 0 0 29px}
 }
 
@@ -121,10 +124,13 @@ ol ol li::before {content:counter(point)'.'counter(subpoint); counter-increment:
 .btn-red {background:#EE8F9F}
 .btn-red:hover {background:#EF5A73}
 
+.btn-dark {background:#3E3E59}
+.btn-dark:hover {background:#4029AC}
+
 .btn-blue {background:#E9E6F3; color:#5C5C73}
 .btn-blue:hover {background:#D1C7F2; color:#5C5C73}
 
-.btn-border {color:#403AAC; border:1px solid #403AAC; padding:17.5px 29px; background:transparent; transition:border-color 0.2s, color 0.2s}
+.btn-border {color:#403AAC; border:1px solid #403AAC; padding:17.5px 29px; background:transparent; transition:border-color 0.2s, color 0.2s, background 0.2s}
 .btn-border:hover {border-color:#4029AC; color:#4029AC; background:transparent}
 
 @media (max-width:1199px) {
@@ -133,6 +139,9 @@ ol ol li::before {content:counter(point)'.'counter(subpoint); counter-increment:
 
 .btn-border.btn-red {background:transparent; border-color:#EE8F9F; color:#EE8F9F}
 .btn-border.btn-red:hover {background:transparent; border-color:#EF5A73; color:#EF5A73}
+
+.btn-border.btn-dark {background:transparent; border-color:#3E3E59; color:#3E3E59}
+.btn-border.btn-dark:hover {background:#4029AC; border-color:#4029AC; color:#FFFFFF}
 
 .btn-border.btn-blue {background:transparent; border-color:#E9E6F3; color:#5C5C73}
 .btn-border.btn-blue:hover {background:transparent; border-color:#5C5C73; color:#5C5C73}
@@ -381,7 +390,7 @@ header.fixed .container {height:39px}
 .header-left {display:flex; align-items:center}
 .header-logo svg {display:block; width:199px; height:30px; fill:#403AAC; transition:width 0.2s, height 0.2s}
 header.fixed .header-logo svg {width:179px; height:28px}
-.header-brand {margin:0 0 0 20px}
+.header-brand {margin:0 0 0 15px}
 .header-brand img {display:block; width:40px; height:40px; transition:width 0.2s, height 0.2s}
 header.fixed .header-brand img {width:24px; height:24px}
 
@@ -409,26 +418,64 @@ header.fixed .header-brand img {width:24px; height:24px}
 
 .header-right {display:flex; align-items:center}
 .header-menu {font-size:16px; line-height:24px; transition:font-size 0.2s, line-height 0.2s}
-header.fixed .header-menu {font-size:14px; line-height:21px}
-.header-menu ul {margin:0; padding:0; list-style:none; display:flex}
-.header-menu ul li {margin:0 0 0 4px; padding:0}
-.header-menu ul li:first-child {margin:0}
-.header-menu ul li::before {display:none}
-.header-menu ul li a {display:block; padding:6px 10px; transition:color 0.2s, background 0.2s; border-radius:4px}
-.header-menu ul li a:hover {background:#F7F5FF}
-.header-menu ul li.active a {background:#F7F5FF}
-.header-buy {margin:0 0 0 20px}
+header.fixed .header-menu {font-size:14px; line-height:20px}
+.header-menu > ul {margin:0; padding:0; list-style:none; display:flex}
+.header-menu > ul > li {margin:0 0 0 1px; padding:0; position:static}
+.header-menu > ul > li:first-child {margin:0}
+.header-menu > ul > li::before {display:none}
+.header-menu > ul > li > a {display:flex; align-items:center; padding:6px 10px; transition:color 0.2s, background 0.2s; border-radius:4px}
+header.fixed .header-menu > ul > li > a {padding:7px 10px 5px 10px}
+@media (min-width:1200px) {
+    .header-menu > ul > li:hover > a {background:#F7F5FF}
+}
+.header-menu > ul > li.active > a {background:#F7F5FF}
+.header-buy {margin:0 0 0 10px}
+.header-buy .btn {padding:11px 15px}
 header.fixed .header-buy .btn {border-radius:0}
+.header-menu > ul > li > a > svg {min-width:12px; max-width:12px; height:10px; fill:#403AAC; margin:0 0 0 8px}
+@media (min-width:1200px) {
+    header.fixed .header-menu > ul > li > a > svg {min-width:9px; max-width:9px; height:8px; margin:-2px 0 0 6px}
+}
+.header-submenu {display:none; position:absolute; left:0; top:100%; right:0; background:#FFFFFF; padding:20px 0}
+header .header-submenu .container {display:block; height:auto}
+@media (min-width:1200px) {
+    .header-menu > ul > li:hover::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; box-shadow:0px 4px 20px rgba(0, 0, 0, 0.1); pointer-events:none}
+    .header-menu > ul > li:hover .header-submenu {display:block}
+}
+.header-submenu::before {content:""; position:absolute; left:0; top:-18px; right:0; height:18px; background:transparent}
+header.fixed .header-submenu::before {top:-4px; height:4px}
+.header-submenu-list {display:flex; flex-wrap:wrap; margin:-20px -10px 0 -10px; align-items:center}
+.header-submenu-list a {display:flex; min-width:calc(33.33% - 20px); max-width:calc(33.33% - 20px); margin:20px 10px 0 10px; align-items:flex-start}
+.header-submenu-section-icon {min-width:30px; max-width:30px; margin:0 10px 0 0}
+.header-submenu-section-icon img {display:block; width:100%}
+.header-submenu-section-title {font-size:16px; line-height:24px}
+.header-submenu-section-anonce {font-size:14px; line-height:21px; color:#5C5C73; transition:color 0.2s}
+@media (min-width:1200px) {
+    .header-submenu-list a:hover .header-submenu-section-anonce {color:#403AAC}
+}
+.header-submenu-product-preview {min-width:96px; max-width:96px; margin:0 5px 0 0; align-self:center}
+.header-submenu-product-preview img {display:block; width:100%}
+.header-submenu-product-title {font-size:16px; line-height:24px; align-self:center; margin:4px 0}
 
 @media (max-width:1199px) {
-    .header-right {display:none; position:fixed; left:0; top:67px; right:0; bottom:0; overflow:auto; background:#F8F8FC}
-    .menu-mobile-open .header-right {display:block}
-    .header-menu {font-size:20px; line-height:30px; background:#FFFFFF}
-    .header-menu ul {display:block}
-    .header-menu ul li {margin:0; border-top:1px solid rgba(168, 168, 191, 0.2)}
-    .header-menu ul li a {padding:20px 56px 20px 20px; color:#403AAC; border-radius:0; position:relative}
-    .header-menu ul li.active a::after {content:""; position:absolute; right:20px; top:17px; width:36px; height:36px; background:url(../images/header-menu-active.svg) no-repeat}
-    .header-buy {display:none; margin:0; border-top:1px solid rgba(168, 168, 191, 0.2); padding:20px 20px 0 20px}
+    .header-right {display:none; position:fixed; left:0; top:67px; right:0; bottom:0; overflow:auto; background:#F8F8FC; flex-direction:column}
+    .menu-mobile-open .header-right {display:flex}
+    .header-menu {font-size:20px; line-height:30px; background:#FFFFFF; flex-grow:1; width:100%}
+    .header-menu > ul {display:block}
+    .header-menu > ul > li {margin:0; border-top:1px solid rgba(168, 168, 191, 0.2)}
+    .header-submenu-open .header-menu > ul > li {display:none}
+    .header-submenu-open .header-menu > ul > li.open {display:block}
+    .header-menu > ul > li > a {padding:20px 56px 20px 20px; color:#403AAC; border-radius:0; position:relative}
+    .header-submenu-open .header-menu > ul > li.open > a {padding:20px 20px 20px 64px; color:#3E3E59; font-weight:600}
+    .header-menu > ul > li.active > a::after {content:""; position:absolute; right:20px; top:17px; width:36px; height:36px; background:url(../images/header-menu-active.svg) no-repeat}
+    .header-menu > ul > li > a > svg {position:absolute; right:26px; top:50%; margin:-6px 0 0 0; transform:rotate(-90deg)}
+    .header-menu > ul > li.active > a > svg {right:52px}
+    .header-submenu-open .header-menu > ul > li.open > a > svg {right:auto; left:29px; transform:rotate(90deg); fill:#3E3E59}
+    .header-submenu-open .header-menu > ul > li.open .header-submenu {display:block; position:relative; left:auto; top:auto; bottom:auto; padding:0}
+    .header-submenu-open .header-menu > ul > li.open .header-submenu .container {padding:0}
+    .header-submenu-list {display:block; margin:0; border-top:1px solid rgba(168, 168, 191, 0.2)}
+    .header-submenu-list a {min-width:0; max-width:none; margin:0; border-bottom:1px solid rgba(168, 168, 191, 0.2); padding:20px}
+    .header-buy {display:none; margin:0; border-top:1px solid rgba(168, 168, 191, 0.2); padding:20px 20px 0 20px; width:100%}
     .menu-mobile-open .header-buy {display:block}
     .header-buy .btn {width:100%}
 }
@@ -443,7 +490,7 @@ header.fixed .header-buy .btn {border-radius:0}
     .header-mobile-feedback-title {font-size:15px; line-height:21px; font-weight:600; color:#5C5C73}
 }
 
-.breadcrumbs {margin:20px 0 0 0; font-size:15px; line-height:20px; color:#C7C7D9; display:flex; align-items:center; flex-wrap:wrap}
+.breadcrumbs {margin:20px 0 0 0; font-size:15px; line-height:20px; color:#C7C7D9; display:flex; align-items:center; flex-wrap:wrap; position:relative; z-index:3}
 .breadcrumbs a {color:#787B8E}
 .breadcrumbs a:hover {color:#403AAC}
 .breadcrumbs svg {min-width:20px; max-width:20px; height:20px; margin:0 10px; fill:#C7C7D9}
@@ -455,7 +502,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .breadcrumbs-mobile {display:none}
 
 @media (max-width:1199px) {
-    .breadcrumbs-mobile {display:flex; margin:15px 0 0 0}
+    .breadcrumbs-mobile {display:flex; margin:15px 0 0 0; position:relative; z-index:3}
     .breadcrumbs-mobile a {display:flex; align-items:center; padding:10px 16px; font-size:12px; line-height:17px; color:#3E3E59; background:#F7F5FF; border-radius:4px}
     .breadcrumbs-mobile a svg {width:16px; height:16px; margin:0 10px 0 0; fill:#3E3E59}
 }
@@ -620,7 +667,38 @@ header.fixed .header-buy .btn {border-radius:0}
 
 .notice-link {cursor:pointer}
 
-.hemorrhoids-welcome {position:relative; padding:60px 0 0 0; margin:0 0 -14px 0}
+.hemorrhoids-welcome-slider {position:relative; margin:-51px calc(580px - 50vw) 0 calc(580px - 50vw)}
+.hemorrhoids-welcome-slider .swiper {overflow:visible}
+.hemorrhoids-welcome-slider .swiper-slide {overflow:hidden; height:728px}
+.hemorrhoids-welcome-slider .swiper-button-prev,
+.hemorrhoids-welcome-slider .swiper-button-next {position:absolute; z-index:2; top:50%; width:58px; height:58px; border:none; border-radius:50%; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:#FFFFFF; transform:translateY(-50%); opacity:1; transition:background 0.2s; display:flex; align-items:center; justify-content:center}
+.hemorrhoids-welcome-slider .swiper-button-prev::after,
+.hemorrhoids-welcome-slider .swiper-button-next::after {display:none}
+.hemorrhoids-welcome-slider .swiper-button-prev {left:40px}
+.hemorrhoids-welcome-slider .swiper-button-next {right:40px}
+.hemorrhoids-welcome-slider .swiper-button-prev:hover,
+.hemorrhoids-welcome-slider .swiper-button-next:hover {background:#EA5C8D}
+.hemorrhoids-welcome-slider .swiper-button-prev svg,
+.hemorrhoids-welcome-slider .swiper-button-next svg {display:block; width:26px; height:26px; fill:#3E3E59; transition:fill 0.2s}
+.hemorrhoids-welcome-slider .swiper-button-prev:hover svg,
+.hemorrhoids-welcome-slider .swiper-button-next:hover svg {fill:#FFFFFF}
+.hemorrhoids-welcome-slider .swiper-pagination.swiper-pagination-horizontal {display:flex; position:absolute; margin:0; width:100%; left:auto; top:auto; right:auto; top:595px; align-items:center; justify-content:center}
+.hemorrhoids-welcome-slider .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet {display:block; min-width:16px; max-width:16px; height:16px; border:1px solid #6F2782; background:transparent; opacity:1; margin:0 8px; border-radius:50%; cursor:pointer; position:relative}
+.hemorrhoids-welcome-slider .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet-active {background:#6F2782; opacity:1}
+
+@media (max-width:1199px) {
+    .hemorrhoids-welcome-slider {margin:-52px -15px 0 -15px}
+    .hemorrhoids-welcome-slider .swiper-slide {overflow:hidden; height:612px}
+    .hemorrhoids-welcome-slider .swiper-button-prev,
+    .hemorrhoids-welcome-slider .swiper-button-next {width:26px; height:26px}
+    .hemorrhoids-welcome-slider .swiper-button-prev {left:5px}
+    .hemorrhoids-welcome-slider .swiper-button-next {right:5px}
+    .hemorrhoids-welcome-slider .swiper-button-prev svg,
+    .hemorrhoids-welcome-slider .swiper-button-next svg {width:14px; height:14px}
+    .hemorrhoids-welcome-slider .swiper-pagination.swiper-pagination-horizontal {top:576px}
+}
+
+.hemorrhoids-welcome {position:relative; padding:60px 0 0 0; margin:51px 0 0 0}
 .hemorrhoids-welcome::before {content:""; position:absolute; left:50%; top:-51px; width:1920px; height:728px; margin:0 0 0 -960px; background:url(../images/hemorrhoids-welcome-bg.jpg) no-repeat; z-index:-1; pointer-events:none}
 .hemorrhoids-welcome::after {content:""; position:absolute; left:50%; top:142px; width:1772px; height:419px; margin:0 0 0 -886px; background:url(../images/hemorrhoids-welcome-scheme.png) no-repeat; z-index:-1; pointer-events:none}
 .hemorrhoids-welcome-title {font-weight:bold; font-size:60px; line-height:78px; text-transform:uppercase; color:#6F2782}
@@ -632,7 +710,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .hemorrhoids-welcome-img-mobile {display:none}
 
 @media (max-width:1199px) {
-    .hemorrhoids-welcome {padding:40px 0 0 0; margin:0 0 -20px 0}
+    .hemorrhoids-welcome {padding:40px 0 0 0; margin:52px 0 -20px 0}
     .hemorrhoids-welcome::before {left:-15px; top:-90px; right:-15px; bottom:0; width:auto; height:auto; margin:0; background:url(../images/hemorrhoids-welcome-bg-mobile.jpg) no-repeat center bottom; background-size:cover}
     .hemorrhoids-welcome::after {display:none}
     .hemorrhoids-welcome-title {font-size:32px; line-height:42px; text-align:center}
@@ -641,6 +719,29 @@ header.fixed .header-buy .btn {border-radius:0}
     .hemorrhoids-welcome-img-mobile {position:relative; display:block; margin:-12px auto 0 auto; width:345px}
     .hemorrhoids-welcome-img-mobile img {max-width:none; height:264px; margin:0 0 0 -67px}
     .hemorrhoids-welcome-img-mobile span {position:absolute; left:249px; top:95px; font-size:10px; line-height:15px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
+}
+
+.hemorrhoids-welcome-2 {height:728px; position:relative}
+.hemorrhoids-welcome-2::before {content:""; position:absolute; left:50%; top:0; width:1920px; height:728px; margin:0 0 0 -960px; background:url(../images/hemorrhoids-welcome-2.jpg) no-repeat}
+.hemorrhoids-welcome-2-container {display:flex; justify-content:flex-end; padding:81px 0 0 0; position:relative}
+.hemorrhoids-welcome-2-title {text-align:right; font-weight:bold; font-size:60px; line-height:78px; text-transform:uppercase; color:#6F2782}
+.fonts-loaded .hemorrhoids-welcome-2-title {font-family:FiraSansCondensed, sans-serif}
+.hemorrhoids-welcome-2-title span {display:block; color:#FE4C55; font-style:italic}
+.hemorrhoids-welcome-2-img {position:relative; margin:-36px -193px 0 0; width:715px}
+.hemorrhoids-welcome-2-img img {display:block; width:100%}
+.hemorrhoids-welcome-2-img span {position:absolute; right:97px; top:126px; font-size:12px; line-height:18px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
+.hemorrhoids-welcome-2-img-mobile {display:none}
+
+@media (max-width:1199px) {
+    .hemorrhoids-welcome-2 {height:612px}
+    .hemorrhoids-welcome-2::before {width:1199px; height:612px; margin:0 0 0 -600px; background:url(../images/hemorrhoids-welcome-2-mobile.jpg) no-repeat}
+    .hemorrhoids-welcome-2-container {padding:244px 0 0 0; display:block}
+    .hemorrhoids-welcome-2-title {text-align:center; font-size:32px; line-height:42px}
+    .hemorrhoids-welcome-2-title span {color:#FFFFFF}
+    .hemorrhoids-welcome-2-img {display:none}
+    .hemorrhoids-welcome-2-img-mobile {position:relative; display:block; margin:-25px auto 0 auto; width:345px}
+    .hemorrhoids-welcome-2-img-mobile img {max-width:none; height:264px; margin:0 0 0 -67px}
+    .hemorrhoids-welcome-2-img-mobile span {position:absolute; left:249px; top:95px; font-size:10px; line-height:15px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
 }
 
 .hemorrhoids-complex-anonce {margin:10px auto 0 auto; max-width:670px; text-align:center; color:#3E3E59}
@@ -1250,7 +1351,7 @@ header.fixed .header-buy .btn {border-radius:0}
 
 @media (max-width:1199px) {
     .products {margin:40px -15px 0 -15px}
-    .products h1 {margin:0 15px; font-size:24px; line-height:34px}
+    .products h1 {margin:0 15px}
     .products::before {top:-97px; height:405px; background-size:auto 405px; background-position:center top}
     .products-item {display:block; padding:15px; border:none; box-shadow:0px 4px 24px rgba(0, 0, 0, 0.14)}
     .products-item-preview {min-width:0; max-width:none; margin:0}
@@ -1288,7 +1389,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .product-detail-info-row-title {font-size:13px; line-height:20px; text-transform:uppercase; color:#3E3E59}
 .product-detail-info-row-value {font-size:15px; line-height:23px; color:#3E3E59}
 .product-detail-info-download {margin:15px 0 0 0}
-.product-detail-info-download a {display:flex; width:100%}
+.product-detail-info-download a {display:flex; width:100%; padding-left:0; padding-right:0; letter-spacing:0}
 
 @media (max-width:1199px) {
     .product-detail {display:block; margin:0 -15px}
@@ -1313,7 +1414,9 @@ header.fixed .header-buy .btn {border-radius:0}
 .product-instruction {margin:120px auto 0 auto; max-width:760px}
 .product-instruction-title {font-weight:600; font-size:36px; line-height:43px; color:#403AAC}
 .fonts-loaded .product-instruction-title {font-family:FiraSansCondensed, sans-serif}
-.product-instruction-subtitle {margin:10px 0 0 0; font-weight:600; font-size:24px; line-height:31px; color:#3E3E59}
+.product-instruction-subtitle {margin:20px 0 0 0; display:flex; align-items:center}
+.product-instruction-subtitle-text {font-weight:600; font-size:24px; line-height:31px; color:#3E3E59}
+.product-instruction-subtitle-link {margin:0 0 0 29px}
 .product-instruction-sections {margin:40px 0 0 0; border-top:1px solid rgba(168, 168, 191, 0.2)}
 .product-instruction-section {border-bottom:1px solid rgba(168, 168, 191, 0.2)}
 .product-instruction-section-title {position:relative; padding:21px 40px 21px 0; line-height:23px; letter-spacing:0.05em; text-transform:uppercase; color:#3E3E59; cursor:pointer; transition:color 0.2s}
@@ -1344,7 +1447,7 @@ header.fixed .header-buy .btn {border-radius:0}
     .product-instruction {margin:60px 0 0 0; max-width:none}
 }
 
-.product-others {margin:60px 0 0 0}
+.product-others {margin:120px 0 0 0}
 .product-others-title {font-weight:600; font-size:36px; line-height:50px; color:#403AAC}
 .fonts-loaded .product-others-title {font-family:FiraSansCondensed, sans-serif}
 .product-others-list {display:flex; flex-wrap:wrap; margin:20px -10px 0 -10px}
@@ -1360,7 +1463,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .product-others-item-buy {position:absolute; right:20px; bottom:24px}
 
 @media (max-width:1199px) {
-    .product-others {margin:40px 0 0 0}
+    .product-others {margin:60px 0 0 0}
     .product-others-title {font-size:30px; line-height:42px}
     .product-others-list {display:block; margin:20px -15px 0 -15px}
     .product-others-item {min-width:0; max-width:none; padding:0; display:block; margin:20px 0 0 0}
@@ -1375,7 +1478,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .experts-title {font-weight:600; font-size:48px; line-height:58px; color:#403AAC}
 
 @media (max-width:1199px) {
-    .experts-title {font-size:24px; line-height:34px; color:#3E3E59}
+    .experts-title {font-size:30px; line-height:42px; color:#3E3E59}
 }
 
 .experts-header {margin:60px 0 0 0; position:relative}
@@ -1508,7 +1611,6 @@ header.fixed .header-buy .btn {border-radius:0}
 @media (max-width:1199px) {
     .events {margin:40px 0 0 0}
     .events::before {top:-92px; height:405px; background-size:auto 405px; background-position:center top}
-    .events h1 {font-size:30px; line-height:42px}
     .events-list {margin:20px -15px 0 -15px}
     .events-item {padding:15px; display:block}
     .events-item-preview {min-width:0; max-width:none; margin:0}
@@ -1563,7 +1665,7 @@ header.fixed .header-buy .btn {border-radius:0}
 .articles-tags label input:checked+span {background:#E9E6F3; border-color:#E9E6F3}
 
 @media (max-width:1199px) {
-    .articles-title {font-size:24px; line-height:34px}
+    .articles-title {font-size:30px; line-height:42px}
     .articles-tags {margin:8px 0 0 -10px}
     .articles-tags label span {padding:4px 11px}
 }
@@ -1820,9 +1922,6 @@ footer {position:relative; margin:120px 0 0 0}
     .window-expert-btns a {margin:0; min-width:calc(50% - 5px); max-width:calc(50% - 5px)}
 }
 
-.expert-link {display:none}
-.expert-link.visible {display:block}
-
 .window-photo-open,
 .window-photo-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
 
@@ -1970,4 +2069,153 @@ footer {position:relative; margin:120px 0 0 0}
 @media (max-width:1199px) {
     .footer-unavailable .container {display:block}
     .footer-unavailable-copyrights {margin:20px 0 0 0}
+}
+
+.section-awards .section-title {text-align:left}
+.awards-list {margin:40px 0 0 0}
+.awards-item {margin:20px 0 0 0}
+.awards-item:nth-child(n + 4) {display:none}
+.awards-item-inner {display:flex; align-items:center; background:#FFFFFF; border-radius:12px; padding:30px; box-shadow:0px 4px 40px rgba(0, 0, 0, 0.15)}
+.awards-item-logo {min-width:60px; max-width:60px; height:60px; display:flex; align-items:center; justify-content:center}
+.awards-item-logo img {display:block; max-height:100%}
+.awards-item-container {margin:0 30px; padding:0 0 0 30px; min-height:60px; width:100%; border-left:1px solid rgba(0, 0, 0, 0.05); display:flex; justify-content:center; flex-direction:column}
+.awards-item-title {font-weight:600; font-size:24px; line-height:31px; color:#3E3E59}
+.awards-item-text {margin:3px 0 0 0; font-size:20px; line-height:26px; color:#3E3E59}
+.awards-item-year {white-space:nowrap}
+.awards-more {margin:20px 0 0 0; display:none; justify-content:center}
+.awards-more.visible {display:flex}
+.awards-more a {display:flex; align-items:center}
+.awards-more a svg {min-width:12px; max-width:12px; height:10px; fill:#403AAC; margin:-2px 10px 0 10px}
+.awards-more.open a svg {transform:rotate(-180deg)}
+.awards-more a span {border-bottom:1px dashed rgba(64, 58, 172, 0.25); transition:border-color 0.2s}
+.awards-more a:hover span {border-color:transparent}
+.awards-more a span+span {display:none}
+.awards-more.open a span {display:none}
+.awards-more.open a span+span {display:block}
+
+@media (max-width:1199px) {
+    .awards-list {margin:20px 0 0 0}
+    .awards-item {margin:10px 0 0 0}
+    .awards-item-inner {display:block; padding:24px; position:relative}
+    .awards-item-logo {min-width:40px; max-width:40px; height:40px}
+    .awards-item-container {margin:20px 0 0 0; padding:0; border-left:none; min-height:0; display:block}
+    .awards-item-title {font-size:18px; line-height:23px}
+    .awards-item-text {margin:5px 0 0 0; font-size:15px; line-height:20px}
+    .awards-item-year {position:absolute; right:24px; top:24px; height:40px; display:flex; align-items:center}
+}
+
+.section-main-articles {margin:40px 0 0 0}
+.main-articles .section-main-articles .section-articles-list {margin-top:0}
+.section-main-articles-header {display:flex; align-items:center; justify-content:space-between}
+.section-main-articles-header-title {font-weight:600; font-size:30px; line-height:42px; color:#403AAC}
+.fonts-loaded .section-main-articles-header-title {font-family:FiraSansCondensed, sans-serif}
+.section-main-articles-header a {border-bottom:1px solid rgba(64, 58, 172, 0.25); transition:border-color 0.2s}
+.section-main-articles-header a:hover {border-color:transparent}
+.section-main-articles-header a svg {display:none}
+
+@media (max-width:1199px) {
+    .section-main-articles {margin:20px 0 0 0}
+    .main-articles .section-main-articles .section-articles-list {margin-top:20px}
+    .section-main-articles-header {position:relative; display:block}
+    .section-main-articles-header-title {font-size:24px; line-height:34px}
+    .section-main-articles-header a {position:absolute; left:0; top:0; right:0; bottom:0; border-bottom:none}
+    .section-main-articles-header a span {display:none}
+    .section-main-articles-header a svg {display:block; position:absolute; right:0; top:50%; width:9px; height:18px; fill:#403AAC; margin-top:-9px}
+}
+
+.section-main-video-faq {margin:80px 0 0 0; display:flex; justify-content:space-between}
+.section-main-video {min-width:calc(50% - 20px); max-width:calc(50% - 20px)}
+.section-main-faq {min-width:calc(50% - 20px); max-width:calc(50% - 20px)}
+
+@media (max-width:1199px) {
+    .section-main-video-faq {margin:40px 0 0 0; display:block}
+    .section-main-video {min-width:0; max-width:none}
+    .section-main-faq {min-width:0; max-width:none; margin:40px 0 0 0}
+}
+
+.main-videos {margin:0 -10px; display:flex; flex-wrap:wrap}
+.main-video {min-width:calc(50% - 20px); max-width:calc(50% - 20px); margin:20px 10px 0 10px}
+.main-video-preview {position:relative; overflow:hidden; border-radius:8px}
+.main-video-preview img {display:block; width:100%}
+.main-video-preview::before {content:""; position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(0, 0, 0, 0.25); transition:background 0.2s}
+.main-video:hover .main-video-preview::before {background:rgba(0, 0, 0, 0.5)}
+.main-video-preview svg {position:absolute; left:50%; top:50%; width:120px; height:120px; fill:#FFFFFF; margin:-60px 0 0 -60px}
+.main-video-title {margin:20px 0 0 0; font-weight:600; font-size:20px; line-height:26px; color:#3E3E59}
+
+@media (max-width:1199px) {
+    .main-videos {margin:20px 0 0 0; display:block}
+    .main-video {min-width:0; max-width:none; margin:20px 0 0 0; display:block}
+    .main-video-title {margin:10px 0 0 0}
+}
+
+.window-video-open,
+.window-video-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
+
+.window-video {position:fixed; left:0; top:0; right:0; bottom:0; z-index:9999; background:#242036; user-select:none}
+
+.window-video-close {position:absolute; right:20px; top:20px; z-index:99}
+.window-video-close svg {display:block; fill:rgba(255, 255, 255, 0.8); transition:fill 0.2s; width:24px; height:24px}
+@media (min-width:1200px) {
+    .window-video-close:hover svg {fill:rgba(255, 255, 255, 1)}
+}
+
+
+.window-video-player {position:absolute; left:150px; top:108px; right:150px; bottom:108px}
+.window-video-player iframe,
+.window-video-player video {display:block; position:absolute; left:0; top:0; width:100%; height:100%}
+
+@media (max-width:1199px) {
+    .window-video-player {left:50%; top:50%; width:90vw; right:auto; bottom:auto; height:50.625vw; transform:translate(-50%, -50%)}
+}
+
+.faq-list {margin:20px 0 0 0; border-top:1px solid rgba(168, 168, 191, 0.2)}
+.faq-item {border-bottom:1px solid rgba(168, 168, 191, 0.2)}
+.faq-item-title {padding:20px 26px 20px 0; position:relative; font-weight:600; font-size:24px; line-height:31px; color:#3E3E59; transition:color 0.2s; cursor:pointer}
+.faq-item-title:hover {color:#EE8F9F}
+.faq-item.open .faq-item-title {color:#EE8F9F}
+.faq-item-title svg {position:absolute; right:0; top:22px; width:26px; height:26px; fill:#3E3E59; transition:fill 0.2s}
+.faq-item.open .faq-item-title svg {display:none; fill:#EE8F9F}
+.faq-item-title svg+svg {display:none}
+.faq-item.open .faq-item-title svg+svg {display:block}
+.faq-item-text {display:none; padding:0 0 20px 0}
+
+@media (max-width:1199px) {
+    .faq-item-title {font-size:20px; line-height:26px}
+    .faq-item-title svg {top:20px}
+}
+
+.video-list {margin:20px -10px 0 -10px; display:flex; flex-wrap:wrap}
+.video-item {min-width:calc(50% - 20px); max-width:calc(50% - 20px); margin:20px 10px 0 10px; padding:24px; background:#FFFFFF; box-shadow:0px 4px 40px rgba(0, 0, 0, 0.15); border-radius:12px}
+.video-item-preview {position:relative; overflow:hidden; border-radius:8px}
+.video-item-preview img {display:block; width:100%}
+.video-item-preview::before {content:""; position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(0, 0, 0, 0.5); transition:background 0.2s}
+.video-item:hover .video-item-preview::before {background:rgba(0, 0, 0, 0.75)}
+.video-item-preview svg {position:absolute; left:50%; top:50%; width:120px; height:120px; fill:#FFFFFF; margin:-60px 0 0 -60px}
+.video-item-type {margin:20px 0 0 0; font-weight:500; font-size:12px; line-height:17px; letter-spacing:0.1em; text-transform:uppercase; color:#3E3E59}
+.video-item-title {margin:20px 0 0 0; font-weight:600; font-size:24px; line-height:31px; color:#3E3E59}
+
+@media (max-width:1199px) {
+    .video-list {margin:20px 0 0 0; display:block}
+    .video-item {min-width:0; max-width:none; margin:20px 0 0 0; display:block; padding:15px}
+    .video-item-title {margin:5px 0 0 0; font-size:20px; line-height:26px}
+}
+
+.faq {margin:40px 0 0 0}
+.faq-group {margin:60px 0 0 0}
+.faq-group:first-child {margin:0}
+.faq-group-title {font-weight:600; font-size:30px; line-height:42px; color:#403AAC}
+.fonts-loaded .faq-group-title {font-family:FiraSansCondensed, sans-serif}
+
+@media (max-width:1199px) {
+    .faq {margin:40px 15px 0 15px}
+    .faq-group-title {font-size:24px; line-height:34px}
+}
+
+.side-info-link {position:fixed; right:-10px; top:50%; transform:translateY(-50%); z-index:10; background:#6F2782; padding:20px 30px 20px 20px; border-radius:12px 0 0 12px; transition:right 0.2s}
+.side-info-link:hover {right:0}
+.side-info-link::before {content:""; display:block; width:49px; height:228px; background:url(../images/side-info-link.svg) no-repeat; background-size:100%}
+
+@media (max-width:1199px) {
+    .side-info-link {right:0; left:0; padding:10px; top:auto; transform:none; bottom:0; border-radius:12px 12px 0 0}
+    .side-info-link::before {margin:0 auto; width:180px; height:31px; background-image:url(../images/side-info-link-mobile.svg)}
 }
