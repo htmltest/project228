@@ -1708,9 +1708,10 @@ header.fixed .header-submenu::before {top:-4px; height:4px}
 .article-card-share {margin:0 0 0 20px; position:relative}
 .article-card-share-link {white-space:nowrap}
 .article-card-share-link a svg {min-width:24px; max-width:24px; height:24px; margin:0 10px 0 0; fill:#FFFFFF}
-.article-card-share-window {display:none; position:absolute; right:0; top:100%; min-width:100%; padding:10px 12px; align-items:center; justify-content:space-between; margin:5px 0 0 0; z-index:20; background:#FFFFFF; box-shadow:0px 0px 36px rgba(0, 0, 0, 0.24); border-radius:4px}
+.article-card-share-window {display:none; position:absolute; left:0; top:100%; padding:10px 12px; align-items:center; margin:5px 0 0 0; z-index:20; background:#FFFFFF; box-shadow:0px 0px 36px rgba(0, 0, 0, 0.24); border-radius:4px}
 .article-card-share.open .article-card-share-window {display:flex}
-.article-card-share-window a {min-width:20px; max-width:20px; transition:transform 0.2s}
+.article-card-share-window a {min-width:20px; max-width:20px; transition:transform 0.2s; margin:0 0 0 20px}
+.article-card-share-window a:first-child {margin:0}
 .article-card-share-window a:hover {transform:scale(1.2)}
 .article-card-share-window a svg {display:block; width:20px; height:20px; fill:none}
 .article-card-photo {margin:40px 0 0 0}
@@ -1726,7 +1727,6 @@ header.fixed .header-submenu::before {top:-4px; height:4px}
     .article-card-view {order:1}
     .article-card-share {margin:0}
     .article-card-share-link a {font-size:12px; line-height:17px; padding:8px 24px}
-    .article-card-share-window {right:auto; left:0}
     .article-card-photo {height:190px; position:relative; overflow:hidden; border-radius:8px; display:flex; justify-content:center}
     .article-card-photo img {width:auto; height:190px; max-width:none; border-radius:8px}
 }
