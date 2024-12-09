@@ -444,9 +444,9 @@ header .header-submenu .container {display:block; height:auto}
 }
 .header-submenu::before {content:""; position:absolute; left:0; top:-18px; right:0; height:18px; background:transparent}
 header.fixed .header-submenu::before {top:-4px; height:4px}
-.header-submenu-list {display:flex; flex-wrap:wrap; margin:-20px -10px 0 -10px; align-items:center}
+.header-submenu-list {display:flex; flex-wrap:wrap; margin:-20px -10px 0 -10px; align-items:flex-start}
 .header-submenu-list a {display:flex; min-width:calc(33.33% - 20px); max-width:calc(33.33% - 20px); margin:20px 10px 0 10px; align-items:flex-start}
-.header-submenu-section-icon {min-width:30px; max-width:30px; margin:0 10px 0 0}
+.header-submenu-section-icon {min-width:48px; max-width:48px; margin:0 10px 0 0}
 .header-submenu-section-icon img {display:block; width:100%}
 .header-submenu-section-title {font-size:16px; line-height:24px}
 .header-submenu-section-anonce {font-size:14px; line-height:21px; color:#5C5C73; transition:color 0.2s}
@@ -458,23 +458,24 @@ header.fixed .header-submenu::before {top:-4px; height:4px}
 .header-submenu-product-title {font-size:16px; line-height:24px; align-self:center; margin:4px 0}
 
 @media (max-width:1199px) {
-    .header-right {display:none; position:fixed; left:0; top:67px; right:0; bottom:0; overflow:auto; background:#F8F8FC; flex-direction:column}
-    .menu-mobile-open .header-right {display:flex}
+    .header-right {display:flex; z-index:999; position:fixed; left:0; top:67px; right:0; bottom:0; overflow:auto; background:#F8F8FC; flex-direction:column; transform:translateX(100%); transition:transform 0.2s}
     .header-menu {font-size:20px; line-height:30px; background:#FFFFFF; flex-grow:1; width:100%}
-    .header-menu > ul {display:block}
+    .header-menu > ul {display:block; overflow:hidden; width:100%; position:relative}
     .header-menu > ul > li {margin:0; border-top:1px solid rgba(168, 168, 191, 0.2)}
     .header-submenu-open .header-menu > ul > li {display:none}
     .header-submenu-open .header-menu > ul > li.open {display:block}
-    .header-menu > ul > li > a {padding:20px 56px 20px 20px; color:#403AAC; border-radius:0; position:relative}
+    .header-menu > ul > li > a {padding:20px 56px 20px 20px; color:#403AAC; border-radius:0; position:relative; overflow:hidden}
     .header-submenu-open .header-menu > ul > li.open > a {padding:20px 20px 20px 64px; color:#3E3E59; font-weight:600}
     .header-menu > ul > li.active > a::after {content:""; position:absolute; right:20px; top:17px; width:36px; height:36px; background:url(../images/header-menu-active.svg) no-repeat}
     .header-menu > ul > li > a > svg {position:absolute; right:26px; top:50%; margin:-6px 0 0 0; transform:rotate(-90deg)}
     .header-menu > ul > li.active > a > svg {right:52px}
     .header-submenu-open .header-menu > ul > li.open > a > svg {right:auto; left:29px; transform:rotate(90deg); fill:#3E3E59}
-    .header-submenu-open .header-menu > ul > li.open .header-submenu {display:block; position:relative; left:auto; top:auto; bottom:auto; padding:0}
+    .header-menu > ul > li .header-submenu {display:block; position:absolute; visibility:hidden; transform:translateX(100%); transition:transform 0.2s}
+    .header-submenu-open .header-menu > ul > li.open .header-submenu {visibility:visible; position:relative; left:auto; top:auto; bottom:auto; padding:0}
     .header-submenu-open .header-menu > ul > li.open .header-submenu .container {padding:0}
     .header-submenu-list {display:block; margin:0; border-top:1px solid rgba(168, 168, 191, 0.2)}
     .header-submenu-list a {min-width:0; max-width:none; margin:0; border-bottom:1px solid rgba(168, 168, 191, 0.2); padding:20px}
+    .header-submenu-section-icon {min-width:30px; max-width:30px}
     .header-buy {display:none; margin:0; border-top:1px solid rgba(168, 168, 191, 0.2); padding:20px 20px 0 20px; width:100%}
     .menu-mobile-open .header-buy {display:block}
     .header-buy .btn {width:100%}
