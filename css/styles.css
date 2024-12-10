@@ -688,7 +688,7 @@ header.fixed .header-submenu::before {top:-4px; height:4px}
 .hemorrhoids-welcome-slider .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet-active {background:#6F2782; opacity:1}
 
 @media (max-width:1199px) {
-    .hemorrhoids-welcome-slider {margin:-52px -15px 0 -15px}
+    .hemorrhoids-welcome-slider {margin:-52px -15px -40px -15px}
     .hemorrhoids-welcome-slider .swiper-slide {overflow:hidden; height:612px}
     .hemorrhoids-welcome-slider .swiper-button-prev,
     .hemorrhoids-welcome-slider .swiper-button-next {width:26px; height:26px}
@@ -699,50 +699,37 @@ header.fixed .header-submenu::before {top:-4px; height:4px}
     .hemorrhoids-welcome-slider .swiper-pagination.swiper-pagination-horizontal {top:576px}
 }
 
-.hemorrhoids-welcome {position:relative; padding:60px 0 0 0; margin:51px 0 0 0}
-.hemorrhoids-welcome::before {content:""; position:absolute; left:50%; top:-51px; width:1920px; height:728px; margin:0 0 0 -960px; background:url(../images/hemorrhoids-welcome-bg.jpg) no-repeat; z-index:-1; pointer-events:none}
-.hemorrhoids-welcome::after {content:""; position:absolute; left:50%; top:142px; width:1772px; height:419px; margin:0 0 0 -886px; background:url(../images/hemorrhoids-welcome-scheme.png) no-repeat; z-index:-1; pointer-events:none}
-.hemorrhoids-welcome-title {font-weight:bold; font-size:60px; line-height:78px; text-transform:uppercase; color:#6F2782}
+.hemorrhoids-welcome {position:relative; padding:40px 0 0 0; margin:51px 0 0 0}
+.hemorrhoids-welcome-bg {position:absolute; left:50%; top:-51px; width:1920px; height:728px; margin:0 0 0 -960px; background:no-repeat center top; background-size:auto 728px; z-index:-1; pointer-events:none}
+.hemorrhoids-welcome-bg-mobile {display:none}
+.hemorrhoids-welcome-container {display:flex; position:relative}
+.hemorrhoids-welcome.right .hemorrhoids-welcome-container {justify-content:flex-end}
+.hemorrhoids-welcome-title {font-weight:bold; font-size:60px; line-height:78px; text-transform:uppercase; color:#6F2782; opacity:0; transition:opacity 0.3s ease-out 0.3s}
 .fonts-loaded .hemorrhoids-welcome-title {font-family:FiraSansCondensed, sans-serif}
+.hemorrhoids-welcome-slider .swiper-slide-active .hemorrhoids-welcome-title {opacity:1}
+.hemorrhoids-welcome.right .hemorrhoids-welcome-title {text-align:right}
 .hemorrhoids-welcome-title span {display:block; font-style:italic; color:#EA5C8D}
-.hemorrhoids-welcome-img {position:relative; margin:-24px 0 0 -173px; width:715px}
+.hemorrhoids-welcome-img {position:relative; margin:-24px 0 0 -173px; width:715px; opacity:0; transition:opacity 0.3s ease-out 0.6s}
+.hemorrhoids-welcome-slider .swiper-slide-active .hemorrhoids-welcome-img {opacity:1}
+.hemorrhoids-welcome.right .hemorrhoids-welcome-img {margin:-24px -193px 0 0}
 .hemorrhoids-welcome-img img {display:block; width:100%}
 .hemorrhoids-welcome-img span {position:absolute; right:97px; top:126px; font-size:12px; line-height:18px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
 .hemorrhoids-welcome-img-mobile {display:none}
 
 @media (max-width:1199px) {
-    .hemorrhoids-welcome {padding:40px 0 0 0; margin:52px 0 -20px 0}
-    .hemorrhoids-welcome::before {left:-15px; top:-90px; right:-15px; bottom:0; width:auto; height:auto; margin:0; background:url(../images/hemorrhoids-welcome-bg-mobile.jpg) no-repeat center bottom; background-size:cover}
-    .hemorrhoids-welcome::after {display:none}
+    .hemorrhoids-welcome {padding:90px 0 0 0; margin:0 0 -40px 0}
+    .hemorrhoids-welcome-bg {display:none}
+    .hemorrhoids-welcome-bg-mobile {display:block; position:absolute; left:50%; top:0; width:1200px; height:612px; margin:0 0 0 -600px; background:no-repeat center top; background-size:auto 612px; z-index:-1; pointer-events:none}
+    .hemorrhoids-welcome-container {display:block}
+    .hemorrhoids-welcome.right {display:block}
     .hemorrhoids-welcome-title {font-size:32px; line-height:42px; text-align:center}
-    .hemorrhoids-welcome-title::after {content:""; display:block; margin:13px -15px 0 -15px; height:135px; background:url(../images/hemorrhoids-welcome-scheme-mobile.svg) no-repeat center}
+    .hemorrhoids-welcome.right .hemorrhoids-welcome-title {text-align:center; padding:154px 0 0 0}
     .hemorrhoids-welcome-img {display:none}
-    .hemorrhoids-welcome-img-mobile {position:relative; display:block; margin:-12px auto 0 auto; width:345px}
+    .hemorrhoids-welcome-img-mobile {position:relative; display:block; margin:129px auto 0 auto; width:345px; opacity:0; transition:opacity 0.3s ease-out 0.6s}
+    .hemorrhoids-welcome-slider .swiper-slide-active .hemorrhoids-welcome-img-mobile {opacity:1}
+    .hemorrhoids-welcome.right .hemorrhoids-welcome-img-mobile {margin:-12px auto 0 auto}
     .hemorrhoids-welcome-img-mobile img {max-width:none; height:264px; margin:0 0 0 -67px}
     .hemorrhoids-welcome-img-mobile span {position:absolute; left:249px; top:95px; font-size:10px; line-height:15px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
-}
-
-.hemorrhoids-welcome-2 {height:728px; position:relative}
-.hemorrhoids-welcome-2::before {content:""; position:absolute; left:50%; top:0; width:1920px; height:728px; margin:0 0 0 -960px; background:url(../images/hemorrhoids-welcome-2.jpg) no-repeat}
-.hemorrhoids-welcome-2-container {display:flex; justify-content:flex-end; padding:81px 0 0 0; position:relative}
-.hemorrhoids-welcome-2-title {text-align:right; font-weight:bold; font-size:60px; line-height:78px; text-transform:uppercase; color:#6F2782}
-.fonts-loaded .hemorrhoids-welcome-2-title {font-family:FiraSansCondensed, sans-serif}
-.hemorrhoids-welcome-2-title span {display:block; color:#FE4C55; font-style:italic}
-.hemorrhoids-welcome-2-img {position:relative; margin:-36px -193px 0 0; width:715px}
-.hemorrhoids-welcome-2-img img {display:block; width:100%}
-.hemorrhoids-welcome-2-img span {position:absolute; right:97px; top:126px; font-size:12px; line-height:18px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
-.hemorrhoids-welcome-2-img-mobile {display:none}
-
-@media (max-width:1199px) {
-    .hemorrhoids-welcome-2 {height:612px}
-    .hemorrhoids-welcome-2::before {width:1199px; height:612px; margin:0 0 0 -600px; background:url(../images/hemorrhoids-welcome-2-mobile.jpg) no-repeat}
-    .hemorrhoids-welcome-2-container {padding:244px 0 0 0; display:block}
-    .hemorrhoids-welcome-2-title {text-align:center; font-size:32px; line-height:42px}
-    .hemorrhoids-welcome-2-title span {color:#FFFFFF}
-    .hemorrhoids-welcome-2-img {display:none}
-    .hemorrhoids-welcome-2-img-mobile {position:relative; display:block; margin:-25px auto 0 auto; width:345px}
-    .hemorrhoids-welcome-2-img-mobile img {max-width:none; height:264px; margin:0 0 0 -67px}
-    .hemorrhoids-welcome-2-img-mobile span {position:absolute; left:249px; top:95px; font-size:10px; line-height:15px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
 }
 
 .hemorrhoids-complex-anonce {margin:10px auto 0 auto; max-width:670px; text-align:center; color:#3E3E59}
