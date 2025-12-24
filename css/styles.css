@@ -826,72 +826,82 @@ header.fixed .header-submenu::before {top:-4px; height:4px}
     .hemorrhoids-reasons-item-text {margin:10px 0 0 0; font-weight:500}
 }
 
-.hemorrhoids-how-menu {display:none}
-.hemorrhoids-how-acute-title {margin:20px 0 0 0; text-align:center; font-weight:bold; font-size:24px; line-height:31px; color:#EA5C8D}
-.hemorrhoids-how-acute-text {text-align:center; font-size:24px; line-height:31px; color:#3E3E59}
-.hemorrhoids-how-acute-content {display:flex; margin:40px 0 0 0; align-items:flex-end}
-.hemorrhoids-how-acute-first-hints {padding:0 0 32px 0; margin:0 10px 0 0; min-width:178px; max-width:178px; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase}
-.hemorrhoids-how-acute-first-hint {margin:50px 0 0 0; display:flex; align-items:center; justify-content:space-between; width:178px}
+.hemorrhoids-how-items {margin:40px 0 0 0}
+.hemorrhoids-how-item {margin:60px 0 0 0}
+.hemorrhoids-how-item:first-child {margin:0}
+.hemorrhoids-how-item-title {text-align:center; font-weight:600; font-size:24px; line-height:1.4em}
+.hemorrhoids-how-item-acute .hemorrhoids-how-item-title {color:#EA5C8D}
+.hemorrhoids-how-item-chronic .hemorrhoids-how-item-title {color:#403AAC}
+.hemorrhoids-how-item-container {margin:40px 0 0 0; display:flex; justify-content:space-between}
+.hemorrhoids-how-item-product {min-width:375px; max-width:375px}
+.hemorrhoids-how-item-product-title {font-weight:500; font-size:18px; line-height:1.3em; color:#3E3E59; text-align:center}
+.hemorrhoids-how-item-product-title br {display:none}
+.hemorrhoids-how-item-acute .hemorrhoids-how-item-product-photo {margin:58px 0 0 0}
+.hemorrhoids-how-item-chronic .hemorrhoids-how-item-product-photo {margin:38px 0 0 0}
+.hemorrhoids-how-item-product-photo img {display:block; width:100%}
+.hemorrhoids-how-item-info {min-width:604px; max-width:604px}
+.hemorrhoids-how-item-info-title {text-align:center; font-weight:500; font-size:18px; line-height:1.3em; color:#3E3E59; margin:0 0 10px 0}
+.hemorrhoids-how-item-info-eating {display:flex; align-items:center; justify-content:center; font-weight:500; font-size:18px; line-height:1.5em; color:#3E3E59}
+.hemorrhoids-how-item-info-eating img {min-width:53px; max-width:53px; margin:0 14px}
+.hemorrhoids-how-acute-content {display:flex; margin:20px auto 16px auto; align-items:flex-end; width:604px; justify-content:space-between; position:relative}
+.hemorrhoids-how-acute-first-hints {position:absolute; right:100%; bottom:31px; margin:0 10px 0 0; font-weight:bold; font-size:8px; line-height:1.5em; letter-spacing:0.1em; text-transform:uppercase; color:#5C5C73}
+.hemorrhoids-how-acute-first-hint {margin:59px 0 0 0; text-align:right}
 .hemorrhoids-how-acute-first-hint:first-child {margin:0}
-.hemorrhoids-how-acute-first-hint::after {content:""; width:118px; height:1px; background:#403AAC}
-.hemorrhoids-how-acute-first {min-width:352px; max-width:352px}
-.hemorrhoids-how-acute-first-title {text-align:center; font-weight:bold; color:#403AAC; font-size:24px; line-height:36px}
-.hemorrhoids-how-acute-first-text {text-align:center; font-size:24px; line-height:36px; color:#3E3E59}
-.hemorrhoids-how-acute-first-days {margin:40px 0 0 0; display:flex; justify-content:center; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase; color:#403AAC}
-.hemorrhoids-how-acute-first-day {min-width:83px; text-align:center}
-.hemorrhoids-how-acute-first-scheme {margin:5px 0 0 0}
-.hemorrhoids-how-acute-first-scheme img {display:block; margin:0 auto}
+.hemorrhoids-how-acute-first {min-width:296px; max-width:296px}
+.hemorrhoids-how-acute-first-title {text-align:center; font-weight:bold; color:#403AAC; font-size:18px; line-height:1.5em}
+.hemorrhoids-how-acute-first-text {text-align:center; font-weight:500; font-size:18px; line-height:1.5em; color:#5C5C73}
+.hemorrhoids-how-acute-first-scheme {margin:10px 0 0 0}
+.hemorrhoids-how-acute-first-scheme img {display:block; width:100%}
 .hemorrhoids-how-acute-first-scheme-mobile {display:none}
-.hemorrhoids-how-acute-second {min-width:352px; max-width:352px; margin:0 0 0 80px}
-.hemorrhoids-how-acute-second-title {text-align:center; font-weight:bold; color:#403AAC; font-size:24px; line-height:36px}
-.hemorrhoids-how-acute-second-text {text-align:center; font-size:24px; line-height:36px; color:#3E3E59}
-.hemorrhoids-how-acute-second-days {margin:40px 0 0 0; display:flex; justify-content:center; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase; color:#403AAC}
-.hemorrhoids-how-acute-second-day {min-width:86px; text-align:center}
-.hemorrhoids-how-acute-second-scheme {margin:5px 0 0 0}
-.hemorrhoids-how-acute-second-scheme img {display:block; margin:0 auto}
+.hemorrhoids-how-acute-second {min-width:296px; max-width:296px}
+.hemorrhoids-how-acute-second-title {text-align:center; font-weight:bold; color:#403AAC; font-size:18px; line-height:1.5em}
+.hemorrhoids-how-acute-second-text {text-align:center; font-weight:500; font-size:18px; line-height:1.5em; color:#5C5C73}
+.hemorrhoids-how-acute-second-scheme {margin:10px 0 0 0}
+.hemorrhoids-how-acute-second-scheme img {display:block; width:100%}
 .hemorrhoids-how-acute-second-scheme-mobile {display:none}
-.hemorrhoids-how-acute-second-hints {padding:0 0 68px 0; margin:0 0 0 10px; min-width:178px; max-width:178px; font-weight:bold; font-size:15px; line-height:23px; letter-spacing:0.1em; text-transform:uppercase}
-.hemorrhoids-how-acute-second-hint {margin:50px 0 0 0; display:flex; align-items:center; width:178px}
+.hemorrhoids-how-acute-second-hints {position:absolute; left:100%; bottom:70px; margin:0 0 0 10px; font-weight:bold; font-size:8px; line-height:1.5em; letter-spacing:0.1em; text-transform:uppercase; color:#5C5C73}
+.hemorrhoids-how-acute-second-hint {margin:57px 0 0 0}
 .hemorrhoids-how-acute-second-hint:first-child {margin:0}
-.hemorrhoids-how-acute-second-hint::before {content:""; width:118px; margin:0 12px 0 0; height:1px; background:#403AAC}
-.hemorrhoids-how-sep {margin:40px 0; height:1px; background:rgba(0, 0, 0, 0.1)}
-.hemorrhoids-how-chronic-title {text-align:center; font-weight:bold; font-size:24px; line-height:31px; color:#EA5C8D}
-.hemorrhoids-how-chronic-text {text-align:center; font-size:24px; line-height:31px; color:#3E3E59}
-.hemorrhoids-how-chronic-scheme {margin:-10px 0; display:flex; justify-content:center}
+.hemorrhoids-how-chronic-scheme {margin:40px 0 5px 0; display:flex; justify-content:center}
+.hemorrhoids-how-chronic-scheme img {max-width:none; width:460px}
 .hemorrhoids-how-chronic-scheme-mobile {display:none}
 
 @media (max-width:1199px) {
-    .hemorrhoids-how-menu {display:flex; margin:20px 0 0 0}
-    .hemorrhoids-how-menu a {min-width:50%; max-width:50%; padding:5px 0 9px 0; border-radius:6px 6px 0 0; border-bottom:1px solid #FFFFFF; text-align:center; font-weight:bold; font-size:20px; line-height:26px; color:#5C5C73}
-    .hemorrhoids-how-menu a.active {background:#F4F2FF; border-color:#EA5C8D; color:#EA5C8D}
-    .hemorrhoids-how-items {margin:40px 0 0 0}
-    .hemorrhoids-how-item {display:none}
-    .hemorrhoids-how-item.active {display:block}
-    .hemorrhoids-how-acute-title {display:none}
-    .hemorrhoids-how-acute-content {display:block}
+    .hemorrhoids-how-items {margin:40px -10px 0 -10px}
+    .hemorrhoids-how-item {margin:10px 0 0 0; border-radius:10px; padding:10px 10px 20px 10px}
+    .hemorrhoids-how-item:first-child {margin:0}
+    .hemorrhoids-how-item-acute {background:rgba(234, 92, 141, 0.15)}
+    .hemorrhoids-how-item-chronic {background:rgba(64, 58, 172, 0.1)}
+    .hemorrhoids-how-item-container {margin:20px 0 0 0; display:block}
+    .hemorrhoids-how-item-product {min-width:0; max-width:345px; margin:0 auto}
+    .hemorrhoids-how-item-product-title br {display:block}
+    .hemorrhoids-how-item-acute .hemorrhoids-how-item-product-photo {margin:0}
+    .hemorrhoids-how-item-chronic .hemorrhoids-how-item-product-photo {margin:0}
+    .hemorrhoids-how-item-product-photo img {display:block; width:100%}
+    .hemorrhoids-how-item-info {min-width:0; max-width:none; margin:20px 0 0 0}
+    .hemorrhoids-how-item-info-eating {margin:20px 0 0 0}
+    .hemorrhoids-how-item-info-eating img {order:0}
+    .hemorrhoids-how-item-info-eating span:first-child {order:1}
+    .hemorrhoids-how-item-info-eating span:last-child {order:2; margin:0 0 0 5px}
+    .hemorrhoids-how-acute-content {display:block; margin:10px auto 0 auto; width:auto; max-width:345px}
     .hemorrhoids-how-acute-first-hints {display:none}
     .hemorrhoids-how-acute-first {min-width:0; max-width:none}
-    .hemorrhoids-how-acute-first-title {font-size:18px; line-height:27px}
-    .hemorrhoids-how-acute-first-text {font-size:18px; line-height:27px; max-width:231px; margin:0 auto}
-    .hemorrhoids-how-acute-first-days {margin:20px 0 0 0; font-size:14px; line-height:21px}
-    .hemorrhoids-how-acute-first-day {min-width:69px}
     .hemorrhoids-how-acute-first-scheme {display:none}
-    .hemorrhoids-how-acute-first-scheme-mobile {display:block; margin:10px auto 0 auto; max-width:345px}
+    .hemorrhoids-how-acute-first-header {display:flex; justify-content:center; align-items:center}
+    .hemorrhoids-how-acute-first-text {margin:2px 0 0 5px}
+    .hemorrhoids-how-acute-first-scheme-mobile {display:block; margin:10px 0 0 0}
     .hemorrhoids-how-acute-first-scheme-mobile img {display:block; margin:0 auto; width:100%}
-    .hemorrhoids-how-acute-second {min-width:0; max-width:none; margin:40px 0 0 0}
-    .hemorrhoids-how-acute-second-title {font-size:18px; line-height:27px}
-    .hemorrhoids-how-acute-second-text {font-size:18px; line-height:27px; max-width:231px; margin:0 auto}
-    .hemorrhoids-how-acute-second-days {margin:20px 0 0 0; font-size:14px; line-height:21px}
-    .hemorrhoids-how-acute-second-day {min-width:0; margin:0 6px}
+    .hemorrhoids-how-acute-second {min-width:0; max-width:none; margin:20px 0 0 0}
+    .hemorrhoids-how-acute-second-header {display:flex; justify-content:center; align-items:center}
+    .hemorrhoids-how-acute-second-text {margin:2px 0 0 5px}
     .hemorrhoids-how-acute-second-scheme {display:none}
-    .hemorrhoids-how-acute-second-scheme-mobile {display:block; margin:10px auto 0 auto; max-width:345px}
+    .hemorrhoids-how-acute-second-scheme-mobile {display:block; margin:10px 0 0 0}
     .hemorrhoids-how-acute-second-scheme-mobile img {display:block; width:100%}
     .hemorrhoids-how-acute-second-hints {display:none}
-    .hemorrhoids-how-sep {display:none}
     .hemorrhoids-how-chronic-title {display:none}
     .hemorrhoids-how-chronic-scheme {display:none}
-    .hemorrhoids-how-chronic-scheme-mobile {display:block; margin:20px auto 0 auto; max-width:345px}
-    .hemorrhoids-how-chronic-scheme-mobile img {display:block; width:100%}
+    .hemorrhoids-how-chronic-scheme-mobile {margin:20px 0 -19px 0; display:flex; justify-content:center}
+    .hemorrhoids-how-chronic-scheme-mobile img {max-width:none; width:388px; margin:0 0 0 -32px}
 }
 
 .hemorrhoids-about {position:relative}

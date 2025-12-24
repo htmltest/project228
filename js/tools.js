@@ -249,18 +249,6 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.hemorrhoids-how-menu a').click(function(e) {
-        var curLink = $(this);
-        if (!curLink.hasClass('active')) {
-            $('.hemorrhoids-how-menu a.active').removeClass('active');
-            curLink.addClass('active');
-            var curIndex = $('.hemorrhoids-how-menu a').index(curLink);
-            $('.hemorrhoids-how-item.active').removeClass('active');
-            $('.hemorrhoids-how-item').eq(curIndex).addClass('active');
-        }
-        e.preventDefault();
-    });
-
     $('.disclaimer-close').click(function(e) {
         $('.disclaimer').fadeOut(function() {
             $('.disclaimer').remove();
