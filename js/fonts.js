@@ -39,6 +39,9 @@ if (sessionStorage.fontsLoaded) {
             style: 'italic',
             weight: 'bold'
         });
+        var SofiaSansExtraCondensed200 = new FontFaceObserver('SofiaSansExtraCondensed', {
+            weight: '200'
+        });
 
         Promise.all([
             Gilroy400.load(),
@@ -48,7 +51,8 @@ if (sessionStorage.fontsLoaded) {
             Gilroy700.load(),
             FiraSansCondensed600.load(),
             FiraSansCondensed700.load(),
-            FiraSansCondensed700i.load()
+            FiraSansCondensed700i.load(),
+            SofiaSansExtraCondensed300.load()
         ]).then(function () {
             html.classList.add('fonts-loaded');
             sessionStorage.fontsLoaded = true;

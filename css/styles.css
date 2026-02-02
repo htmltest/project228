@@ -1859,17 +1859,16 @@ footer {position:relative; margin:120px 0 0 0}
 
 .disclaimer {position:fixed; left:0; bottom:0; right:0; z-index:91; background:rgba(64, 58, 172, 0.8); padding:6px 0}
 .disclaimer .container {display:flex; align-items:center; justify-content:space-between}
-.disclaimer-text img {display:block}
-.disclaimer-text-mobile {display:none}
+.disclaimer-text {padding:10px 0; font:200 36px/1em SofiaSansExtraCondensed, sans-serif; text-transform:uppercase; letter-spacing:0.02em; color:rgba(255, 255, 255, 0.6); transform:scale(1, 1.8)}
+.disclaimer-text br {display:none}
 .disclaimer-close {min-width:30px; max-width:30px}
 .disclaimer-close svg {display:block; width:30px; height:30px; fill:#FFFFFF; transition:fill 0.2s}
 .disclaimer-close:hover svg {fill:rgba(255, 255, 255, 0.8)}
 
 @media (max-width:1199px) {
     .disclaimer {padding:10px 0 6px 0}
-    .disclaimer-text {display:none}
-    .disclaimer-text-mobile {display:block}
-    .disclaimer-text-mobile img {display:block}
+    .disclaimer-text {padding:20px 0; font-size:17px; transform:scale(1, 2.2)}
+    .disclaimer-text br {display:block}
     .disclaimer-close {position:absolute; right:10px; top:5px; min-width:24px; max-width:24px}
     .disclaimer-close svg {width:24px; height:24px}
 }
