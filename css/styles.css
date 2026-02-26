@@ -491,10 +491,10 @@ header.fixed .header-submenu::before {top:-4px; height:4px}
     .header-mobile-feedback-title {font-size:15px; line-height:21px; font-weight:600; color:#5C5C73}
 }
 
-.breadcrumbs {margin:20px 0 0 0; font-size:15px; line-height:20px; color:#C7C7D9; display:flex; align-items:center; flex-wrap:wrap; position:relative; z-index:3}
+.breadcrumbs {margin:20px 0 0 0; font-size:15px; line-height:20px; color:#B0AAD2; display:flex; align-items:center; flex-wrap:wrap; position:relative; z-index:3}
 .breadcrumbs a {color:#787B8E}
 .breadcrumbs a:hover {color:#403AAC}
-.breadcrumbs svg {min-width:20px; max-width:20px; height:20px; margin:0 10px; fill:#C7C7D9}
+.breadcrumbs svg {min-width:20px; max-width:20px; height:20px; margin:0 10px; fill:#B0AAD2}
 
 @media (max-width:1199px) {
     .breadcrumbs {display:none}
