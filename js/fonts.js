@@ -52,7 +52,7 @@ if (sessionStorage.fontsLoaded) {
             FiraSansCondensed600.load(),
             FiraSansCondensed700.load(),
             FiraSansCondensed700i.load(),
-            SofiaSansExtraCondensed300.load()
+            SofiaSansExtraCondensed200.load()
         ]).then(function () {
             html.classList.add('fonts-loaded');
             sessionStorage.fontsLoaded = true;
