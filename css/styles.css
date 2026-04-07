@@ -491,11 +491,11 @@ header.fixed .header-submenu::before {top:-4px; height:4px}
     .header-mobile-feedback-title {font-size:15px; line-height:21px; font-weight:600; color:#5C5C73}
 }
 
-.breadcrumbs {margin:20px 0 0 0; font-size:15px; line-height:20px; color:#B0AAD2; display:flex; align-items:center; flex-wrap:wrap; position:relative; z-index:3; display:flex; flex-wrap:wrap; align-items:center}
+.breadcrumbs {margin:20px 0 0 0; font-size:15px; line-height:20px; color:#C7C7D9; display:flex; align-items:center; flex-wrap:wrap; position:relative; z-index:3; display:flex; flex-wrap:wrap; align-items:center}
 .breadcrumbs div {display:flex; align-items:center}
 .breadcrumbs a {color:#787B8E}
 .breadcrumbs a:hover {color:#403AAC}
-.breadcrumbs svg {min-width:20px; max-width:20px; height:20px; margin:0 10px; fill:#B0AAD2}
+.breadcrumbs svg {min-width:20px; max-width:20px; height:20px; margin:0 10px; fill:#C7C7D9}
 
 @media (max-width:1199px) {
     .breadcrumbs {display:none}
@@ -505,7 +505,7 @@ header.fixed .header-submenu::before {top:-4px; height:4px}
 
 @media (max-width:1199px) {
     .breadcrumbs-mobile {display:flex; margin:15px 0 0 0; position:relative; z-index:3}
-    .breadcrumbs-mobile a {display:flex; align-items:center; padding:10px 16px; font-size:12px; line-height:17px; color:#3E3E59; background:#F7F5FF; border-radius:4px}
+    .breadcrumbs-mobile a {display:flex; align-items:center; padding:10px 16px; font-size:12px; line-height:17px; color:#3E3E59; background:transparent; border:1px solid #3E3E59; border-radius:4px}
     .breadcrumbs-mobile a svg {width:16px; height:16px; margin:0 10px 0 0; fill:#3E3E59}
 }
 
@@ -1041,67 +1041,16 @@ header.fixed .header-submenu::before {top:-4px; height:4px}
 }
 
 .varicose-welcome {position:relative; padding:60px 0 0 0}
-.varicose-welcome::before {content:""; position:absolute; left:50%; top:-51px; width:1920px; height:1134px; margin:0 0 0 -960px; background:url(../images/varicose-welcome-bg.png) no-repeat; pointer-events:none}
-.varicose-welcome-title {font-weight:600; font-size:48px; line-height:58px; color:#403AAC; position:relative}
+.varicose-welcome::before {content:""; position:absolute; left:50%; top:-51px; width:1920px; height:976px; margin:0 0 0 -960px; background:url(../images/varicose-welcome-bg.jpg) no-repeat; pointer-events:none}
+.varicose-welcome-title {font-weight:600; font-size:80px; line-height:1.2em; color:#7C2175; position:relative; max-width:485px}
 .fonts-loaded .varicose-welcome-title {font-family:FiraSansCondensed, sans-serif}
-.varicose-welcome-content {height:560px; position:relative}
-.varicose-welcome-box {position:absolute; left:-4px; top:93px; width:757px}
-.varicose-welcome-box img {display:block; width:100%}
-.varicose-welcome-box img+img {display:none}
-.varicose-welcome-box-label-1 {position:absolute; right:263px; top:70px; font-size:10px; line-height:15px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
-.varicose-welcome-box-label-2 {position:absolute; right:-8px; top:337px; font-size:10px; line-height:15px; color:#6F2782; text-transform:uppercase; transform:rotate(-90deg); white-space:nowrap}
-.varicose-welcome-brand {position:absolute; left:-18px; top:324px; width:130px}
-.varicose-welcome-brand img {display:block; width:100%}
-.varicose-welcome-legs {position:absolute; right:7px; bottom:0; width:312px}
-.varicose-welcome-legs img {display:block; width:100%}
-.varicose-welcome-text {position:absolute; font-weight:600; font-size:48px; line-height:58px; color:#6F2782}
-.fonts-loaded .varicose-welcome-text {font-family:FiraSansCondensed, sans-serif}
-.varicose-welcome-text-1 {right:276px; bottom:395px; animation:legAnim1 8s ease-in-out infinite}
-.varicose-welcome-text-2 {right:309px; bottom:319px; animation:legAnim2 8s ease-in-out infinite}
-.varicose-welcome-text-3 {right:297px; bottom:243px; animation:legAnim3 8s ease-in-out infinite}
-
-.varicose-welcome-legs-1 {animation:legAnim1 8s ease-in-out infinite}
-.varicose-welcome-legs-2 {animation:legAnim2 8s ease-in-out infinite}
-.varicose-welcome-legs-3 {animation:legAnim3 8s ease-in-out infinite}
-
-@-webkit-keyframes legAnim1 {
-    0% {opacity:1}
-    25% {opacity:0}
-    50% {opacity:0}
-    75% {opacity:0}
-    to {opacity:1}
-}
-@-webkit-keyframes legAnim2 {
-    0% {opacity:1}
-    25% {opacity:1}
-    50% {opacity:0}
-    75% {opacity:0}
-    to {opacity:1}
-}
-@-webkit-keyframes legAnim3 {
-    0% {opacity:1}
-    25% {opacity:1}
-    50% {opacity:1}
-    75% {opacity:0}
-    to {opacity:1}
-}
+.varicose-welcome-content {height:466px; position:relative}
 
 @media (max-width:1199px) {
-    .varicose-welcome {padding:40px 0 0 0}
-    .varicose-welcome::before {left:-15px; top:-90px; right:-15px; bottom:0; width:auto; height:auto; margin:0; background:url(../images/varicose-welcome-bg-mobile.jpg) no-repeat center bottom; background-size:cover; z-index:-1}
-    .varicose-welcome-title {font-size:30px; line-height:36px; text-align:center}
-    .varicose-welcome-content {height:663px; max-width:345px; margin:0 auto}
-    .varicose-welcome-box {left:13px; top:55px; width:331px}
-    .varicose-welcome-box img {display:none}
-    .varicose-welcome-box img+img {display:block}
-    .varicose-welcome-box-label-1 {right:53px; top:66px}
-    .varicose-welcome-box-label-2 {right:-45px; top:122px}
-    .varicose-welcome-brand {left:5px; top:173px; width:80px}
-    .varicose-welcome-legs {right:101px; bottom:79px; width:152px}
-    .varicose-welcome-text {font-size:30px; line-height:36px}
-    .varicose-welcome-text-1 {right:225px; bottom:241px}
-    .varicose-welcome-text-2 {right:45px; bottom:312px}
-    .varicose-welcome-text-3 {right:30px; bottom:130px}
+    .varicose-welcome {padding:20px 0 0 0}
+    .varicose-welcome::before {top:-70px; width:1200px; height:751px; margin:0 0 0 -600px; background:url(../images/varicose-welcome-bg-mobile.jpg) no-repeat; background-size:cover; z-index:-1}
+    .varicose-welcome-title {font-size:60px; line-height:1.2em; max-width:332px}
+    .varicose-welcome-content {height:501px}
 }
 
 .varicose-how {margin:0; position:relative}
