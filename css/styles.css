@@ -16,7 +16,7 @@ iframe {border:none; max-width:100%}
 
 strong, b {font-weight:600}
 
-sup {vertical-align:top}
+sup {vertical-align:text-bottom}
 
 h1 {margin:60px 0 20px 0; padding:0; font-weight:600; font-size:36px; line-height:43px; color:#403AAC}
 .fonts-loaded h1 {font-family:FiraSansCondensed, sans-serif}
@@ -1035,6 +1035,7 @@ header.fixed .header-submenu::before {top:-4px; height:4px}
 .notices-item-text p {margin:0}
 .notices-item-text a {color:#EE8F9F}
 .notices-item-text a:hover {color:#403AAC}
+.notices-item-text sup {vertical-align:top}
 .notices-more {display:flex; margin:20px 0 0 0}
 .notices-more a {display:flex; align-items:center; color:#EE8F9F}
 .notices-more a:hover {color:#403AAC}
